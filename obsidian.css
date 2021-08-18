@@ -210,7 +210,8 @@ body.is-translucent {
   background-color: var(--background-secondary-alt);
   border-top: 0px;
   max-height: var(--status-bar-size);
-  line-height: var(--status-bar-size);
+  line-height: var(--status-bar-size);    
+  -webkit-app-region: drag;
 }
 
 /***************************************/
@@ -830,6 +831,7 @@ thead {
 }
 .workspace-ribbon {
   width: var(--workspace-ribbon-size);
+  -webkit-app-region: drag;
 }
 /* .workspace-split.mod-left-split {
   margin-left: var(--workspace-ribbon-size);
