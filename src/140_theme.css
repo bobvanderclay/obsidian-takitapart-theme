@@ -1,0 +1,68 @@
+.theme-light,
+.theme-dark {
+  --background-primary: var(--ef_bg0);
+  --background-primary-alt: var(--ef_bg0);
+  --background-secondary: var(--ef_bg0);
+  --background-secondary-alt: transparent;
+  --background-accent: #fff;
+  --background-modifier-border: var(--base02);
+  --background-modifier-form-field: rgba(0, 0, 0, 0.2);
+  --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+  --background-modifier-success: #197300; /*no sure*/
+  --background-modifier-error: #9c383a; /*no sure*/
+  --background-modifier-error-rgb: 61, 0, 0;
+  --background-modifier-error-hover: #9c383a;
+  --background-modifier-cover: rgba(0, 0, 0, 0.6);
+  --opacity-translucency: 0.6;
+
+  --text-accent: var(--ef_blue);
+  --text-accent-hover: var(--ef_blue);
+  --text-normal: #fbf1c7;
+  --text-muted: #d5c4a1;
+  --text-muted-rgb: 136, 136, 136;
+  --text-faint: #ac9f86;
+  --text-highlight-bg: #458588;
+  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
+  --text-error: #9c383a;
+  --text-error-hover: #9c383a;
+  --text-selection: rgba(89, 75, 95, 0.99);
+
+  --text-on-accent: var(--text-normal);
+  --interactive-normal: var(--gf_yellow);
+  --interactive-hover: var(--gf_yellow);
+  --interactive-accent: var(--gf_yellow);
+  --interactive-accent-rgb: 123, 108, 217;
+  --interactive-accent-hover: var(--teal);
+  --interactive-success: var(--gf_green);
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.4);
+  --scrollbar-bg: rgba(0, 0, 0, 0.05);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.2);
+  --highlight-mix-blend-mode: darken;
+
+  /* Custom */
+  --text-title-h1: var(--gf_yellow);
+  --text-title-h2: var(--gf_yellow);
+  --text-title-h3: var(--gf_yellow);
+  --text-title-h4: var(--gf_yellow);
+  --text-title-h5: var(--gf_yellow);
+  --text-title-h6: var(--gf_yellow);
+  --inline-code: var(--gf_yellow);
+  --code-block: var(--gf_yellow);
+  --pre-code-bg: rgba(0, 0, 0, 0.2);
+  --blockquote-border: var(--text-accent);
+  --vim-cursor: #d65d0e;
+  --hover-bg: rgba(0, 0, 0, 0.5);
+  --side-dock-color: var(--ef_bg0);
+
+  --surround-bg: transparent;
+  --surround-normal: var(--gf_yellow);
+  --surround-accent: var(--gf_green);
+  --surround-hover: var(--gf_yellow);
+  --surround-muted: var(--gf_yellow);
+  --surround-icon: var(--gf_yellow);
+  --surround-icon-accent: var(--gf_green);
+  --surround-icon-hover: var(--gf_red);
+  --surround-icon-muted: var(--gf_blue);
+}
+/* better use rgba color for all color var ended with `bg`*/

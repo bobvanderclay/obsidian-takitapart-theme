@@ -9,15 +9,18 @@ body:not(.is-mobile) .app-container {
   position: absolute;
   inset: 0;
 }
+.app-container {
+  background-color: var(--surround-bg);
+}
 
 /***************************************/
 /* Side Dock Ribbons                   */
 /***************************************/
 .side-dock-ribbon {
-  flex: 0 0 var(--workspace-ribbon-size) !important;
+  flex: 0 0 var(--surround-size) !important;
 }
 .workspace-ribbon {
-  width: var(--workspace-ribbon-size);
+  width: var(--surround-size);
   -webkit-app-region: drag;
 }
 /* .workspace-split.mod-left-split {
@@ -27,7 +30,7 @@ body:not(.is-mobile) .app-container {
   margin-right: var(--workspace-ribbon-size);
 } */
 .workspace-ribbon-collapse-btn {
-  padding: 20px calc((var(--workspace-ribbon-size) - 16px) / 2);
+  padding: 20px calc((var(--surround-size) - 16px) / 2);
 }
 .side-dock-ribbon-action {
   color: var(--side-dock-color);
@@ -148,4 +151,60 @@ body:not(.is-mobile) .app-container {
 .tooltip.mod-left .tooltip-arrow {
   border-left-color: white !important;
   border-bottom-color: transparent !important;
+}
+
+/***************************************/
+/*  resize-handle and borders          */
+/***************************************/
+/*vertical resize-handle*/
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  width: 4px !important;
+  background-color: var(--surround-bg);
+}
+
+/*horizontal resize-handle*/
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  height: 4px !important;
+  background-color: var(--surround-bg);
+}
+
+/*workspace ribbon when collapsed*/
+.workspace-ribbon.is-collapsed {
+  background-color: transparent;
+}
+
+/*the vertical split*/
+.workspace-split.mod-root .workspace-split.mod-vertical .workspace-leaf-content,
+.workspace-split.mod-vertical > .workspace-split,
+.workspace-split.mod-vertical > .workspace-leaf,
+.workspace-tabs {
+  padding-right: 0px;
+}
+
+.document-search-container {
+  border-top: 0px;
+  border-right: 0px;
+  z-index: inherit;
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+  border-right: 1px solid var(--border-color);
+}
+
+.workspace-ribbon.mod-right.is-collapsed {
+  border-left: 1px solid var(--border-color);
+}
+
+/***************************************/
+/*  workspace-ribbon                   */
+/***************************************/
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
+  color: var(--surround-icon);
+
+  &:hover {
+    color: var(--surround-icon-hover);
+  }
 }
