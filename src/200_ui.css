@@ -200,6 +200,14 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /*  workspace-ribbon                   */
 /***************************************/
+.workspace-ribbon-collapse-btn {
+  color: var(--surround-icon-muted);
+
+  &:hover {
+    color: var(--surround-icon-hover);
+  }
+}
+
 .side-dock-ribbon-tab,
 .side-dock-ribbon-action {
   color: var(--surround-icon);

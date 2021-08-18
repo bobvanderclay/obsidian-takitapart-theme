@@ -20,7 +20,7 @@
 
     &.is-active {
       background-color: transparent !important;
-      border-bottom: 3px solid var(--surround-accent) !important;
+      border-bottom: 3px solid var(--surround-bg-accent) !important;
       color: var(--surround-icon-accent);
     }
 
@@ -52,7 +52,7 @@
   }
 
   & .view-header-icon {
-    color: var(--surround-icon);
+    color: var(--surround-icon-muted);
   }
 
   & .view-header-title-container {
@@ -70,7 +70,7 @@
 
     & .view-header-title {
       line-height: var(--surround-size) !important;
-      color: var(--surround-normal);
+      color: var(--surround-muted);
     }
   }
 
@@ -89,14 +89,14 @@
 /* Active view */
 .workspace-leaf.mod-active {
   & .view-header {
-    border-bottom: 3px solid var(--surround-accent) !important;
+    border-bottom: 3px solid var(--surround-bg-accent) !important;
 
     & .view-header-icon {
       color: var(--surround-icon-accent);
     }
 
     & .view-header-title {
-      color: var(--surround-accent);
+      color: var(--surround-normal);
     }
   }
 }

@@ -1,1 +1,19 @@
-/* Settings */
+/* @settings
+name: takitapart Theme
+id: takitapart
+settings:
+  - 
+    id: surround-heading
+    title: Surround
+    type: heading
+    level: 2
+    collapsed: false 
+  - 
+    id: surround-bg
+    title: Background Color
+    type: variable-color
+    format: rgb
+    opacity: true
+    default: 'rgba(255, 255, 255, 0)'
+
+*/

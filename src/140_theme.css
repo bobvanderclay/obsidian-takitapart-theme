@@ -56,13 +56,14 @@
   --side-dock-color: var(--ef_bg0);
 
   --surround-bg: transparent;
-  --surround-normal: var(--gf_yellow);
-  --surround-accent: var(--gf_green);
+  --surround-bg-accent: var(--gf_yellow);
+  --surround-normal: var(--ef_bg0);
+  --surround-accent: var(--ef_bg0);
   --surround-hover: var(--gf_yellow);
-  --surround-muted: var(--gf_yellow);
+  --surround-muted: var(--ef_blue);
   --surround-icon: var(--gf_yellow);
-  --surround-icon-accent: var(--gf_green);
+  --surround-icon-accent: var(--gf_yellow);
   --surround-icon-hover: var(--gf_red);
-  --surround-icon-muted: var(--gf_blue);
+  --surround-icon-muted: var(--ef_blue);
 }
 /* better use rgba color for all color var ended with `bg`*/
