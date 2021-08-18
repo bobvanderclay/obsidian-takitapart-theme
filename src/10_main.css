@@ -849,6 +849,14 @@ thead {
 /***************************************/
 /*            Side panel               */
 /***************************************/
+/* Rounded corners. */
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+  border-radius: 8px 0 0 8px;
+}
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-radius: 0 8px 8px 0;
+}
+
 /* .search-result-file-matched-text {
   color: var(--text-normal);
   background-color: var(--text-highlight-bg);
