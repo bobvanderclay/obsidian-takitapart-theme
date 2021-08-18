@@ -1,3 +1,8 @@
+@import '110_settings.css';
+@import '120_colors.css';
+@import '130_fonts.css';
+@import '140_sizes.css';
+
 :root {
   --font-size-normal: 15px;
   --font-size-code: 13.5px;
@@ -170,12 +175,14 @@
 body.is-translucent {
   background-color: rgba(0, 0, 0, 0);
   opacity: 1;
-}
-.is-translucent .workspace-split.mod-root {
-  opacity: 1;
-}
-.is-translucent .workspace-tabs {
-  opacity: 1;
+
+  & .workspace-split.mod-root {
+    opacity: 1;
+  }
+
+  & .workspace-tabs {
+    opacity: 1;
+  }
 }
 
 /***************************************/
@@ -184,34 +191,6 @@ body.is-translucent {
 .app-container {
   position: absolute;
   inset: 0;
-}
-
-/***************************************/
-/*  Titlebar                           */
-/***************************************/
-.titlebar {
-  background-color: var(--background-secondary-alt) !important;
-}
-
-.titlebar-button-container {
-  top: 0 !important;
-}
-
-.titlebar-text {
-  color: rgba(255, 255, 255, 0.25) !important;
-}
-
-/***************************************/
-/*  Statusbar                          */
-/***************************************/
-.status-bar {
-  color: var(--text-normal);
-  font-size: var(--font-size-status-bar);
-  background-color: var(--background-secondary-alt);
-  border-top: 0px;
-  max-height: var(--status-bar-size);
-  line-height: var(--status-bar-size);    
-  -webkit-app-region: drag;
 }
 
 /***************************************/
@@ -293,7 +272,7 @@ a.tag:hover {
 }
 
 /* to customize tags */
-.tag[href="#obsidian"] {
+.tag[href='#obsidian'] {
   /* .tag[href^="#obsidian"] match any tag started with "xxx"*/
   /* .tag[href="#obsidian"] exact match with "xxx"*/
   background-color: black;
@@ -427,7 +406,7 @@ span.cm-formatting-list-ul {
   visibility: hidden !important;
 }
 span.cm-formatting-list-ul:after {
-  content: "• ";
+  content: '• ';
   margin-left: -12px;
   visibility: visible !important;
 }
@@ -567,16 +546,16 @@ code {
 }
 
 /* remove the shadow that typically affect light mode */
-.theme-dark code[class*="language-"],
-.theme-dark pre[class*="language-"],
-.theme-light code[class*="language-"],
-.theme-light pre[class*="language-"] {
+.theme-dark code[class*='language-'],
+.theme-dark pre[class*='language-'],
+.theme-light code[class*='language-'],
+.theme-light pre[class*='language-'] {
   text-shadow: none !important;
   color: var(--text-faint) !important;
 }
 
-.theme-light code[class*="language-"],
-.theme-light pre[class*="language-"] {
+.theme-light code[class*='language-'],
+.theme-light pre[class*='language-'] {
   background-color: var(--background-primary-alt);
 }
 .theme-light .token.operator,
@@ -769,7 +748,7 @@ thead {
 /***************************************/
 
 .markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: "✓";
+  content: '✓';
   position: absolute;
   color: var(--text-accent);
   font-size: 1em;
@@ -900,16 +879,16 @@ thead {
 } */
 
 /*backlink pane*/
-.workspace-leaf-content[data-type="backlink"] .view-content {
+.workspace-leaf-content[data-type='backlink'] .view-content {
   background-color: var(--background-secondary);
 }
 
-.workspace-leaf-content[data-type="tag"] .tag-pane-tag-count,
-.workspace-leaf-content[data-type="tag"] .tag-pane-tag-text {
+.workspace-leaf-content[data-type='tag'] .tag-pane-tag-count,
+.workspace-leaf-content[data-type='tag'] .tag-pane-tag-text {
   font-size: var(--font-size-side-dock);
 }
 
-.workspace-leaf-content[data-type="backlink"] .search-result-file-matches {
+.workspace-leaf-content[data-type='backlink'] .search-result-file-matches {
   font-size: var(--font-size-side-dock);
 }
 /***************************************/
@@ -969,7 +948,7 @@ thead {
   color: var(--text-muted);
 }
 
-.workspace-leaf-content[data-type="graph"] .view-content {
+.workspace-leaf-content[data-type='graph'] .view-content {
   background-color: var(--background-primary);
 }
 
@@ -1095,7 +1074,7 @@ ul ul {
   position: relative;
 }
 ul ul::before {
-  content: "";
+  content: '';
   border-left: 1px solid var(--border-color);
   position: absolute;
 }
@@ -1122,7 +1101,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 */
 
 .cm-hmd-list-indent .cm-tab::before {
-  content: " ";
+  content: ' ';
   border-left: 2px solid rgba(255, 255, 255, 0.05);
   position: absolute;
   height: 100%;
@@ -1134,8 +1113,8 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 /* Hide scrollbar in preview, search, file, tag, backlinks, outline */
 .markdown-preview-view::-webkit-scrollbar,
 .workspace-leaf-content::-webkit-scrollbar,
-.workspace-leaf-content[data-type="backlink"] .view-content::-webkit-scrollbar,
-.workspace-leaf-content[data-type="outline"] .view-content::-webkit-scrollbar {
+.workspace-leaf-content[data-type='backlink'] .view-content::-webkit-scrollbar,
+.workspace-leaf-content[data-type='outline'] .view-content::-webkit-scrollbar {
   display: none !important;
 }
 /* Hide scrollbar for editor*/
@@ -1216,17 +1195,15 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content {
 }
 
-
-
 /***************************************/
 /*  Workspace                          */
 /***************************************/
 /* Gaps between workspaces. */
 .mod-left-split {
-  padding: 0  8px 0 0;
+  padding: 0 8px 0 0;
 }
 .workspace-leaf {
-  padding: 0 8px 0 0;
+  padding: 0 8px 0 0 !important;
 }
 .mod-right-split .workspace-leaf {
   padding: 0;

@@ -1,0 +1,9 @@
+.status-bar {
+  color: var(--text-normal);
+  font-size: var(--font-size-status-bar);
+  background-color: var(--background-secondary-alt);
+  border-top: 0px;
+  max-height: var(--status-bar-size);
+  line-height: var(--status-bar-size);
+  -webkit-app-region: drag;
+}

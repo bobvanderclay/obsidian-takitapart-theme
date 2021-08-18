@@ -1,0 +1,11 @@
+.titlebar {
+  background-color: var(--background-secondary-alt) !important;
+}
+
+.titlebar-button-container {
+  top: 0 !important;
+}
+
+.titlebar-text {
+  color: rgba(255, 255, 255, 0.25) !important;
+}

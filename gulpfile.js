@@ -1,26 +1,32 @@
-require("dotenv").config();
+require('dotenv').config();
 
-const postcss = require('gulp-postcss');
 const gulp = require('gulp');
-const concat = require("gulp-concat");
-const rename = require("gulp-rename");
+const postcss = require('gulp-postcss');
+const postcssNesting = require('postcss-nesting');
+const postcssImport = require('postcss-import');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
 
-gulp.task("css", function () {
+const postCssPlugins = [postcssImport(), postcssNesting()];
+
+gulp.task('css', function () {
   if (process.env.OBSIDIAN_THEMES_DIR) {
     return gulp
-      .src("./src/*.css")
-      .pipe(concat("obsidian.css"))
-      .pipe(gulp.dest("./"))
-      .pipe(rename("takitapart.css"))
+      .src('./src/000_entry.css')
+      .pipe(postcss(postCssPlugins))
+      .pipe(concat('obsidian.css'))
+      .pipe(gulp.dest('./'))
+      .pipe(rename('takitapart.css'))
       .pipe(gulp.dest(process.env.OBSIDIAN_THEMES_DIR));
   } else {
     return gulp
-      .src("./src/*.css")
-      .pipe(concat("obsidian.css"))
-      .pipe(gulp.dest("./"));
+      .src('./src/000_entry.css')
+      .pipe(postcss(postCssPlugins))
+      .pipe(concat('obsidian.css'))
+      .pipe(gulp.dest('./'));
   }
 });
 
-gulp.task("css:watch", function () {
-  gulp.watch("./src/*.css", gulp.series("css"));
+gulp.task('css:watch', function () {
+  gulp.watch('./src/*.css', gulp.series('css'));
 });
