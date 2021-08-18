@@ -179,10 +179,10 @@ settings:
   --surround-bg: transparent;
   --surround-bg-accent: var(--gf_yellow);
   --surround-normal: var(--ef_bg0);
-  --surround-accent: var(--ef_bg0);
-  --surround-hover: var(--gf_yellow);
+  --surround-accent: var(--gf_yellow);
+  --surround-hover: var(--gf_red);
   --surround-muted: var(--ef_blue);
-  --surround-icon: var(--gf_yellow);
+  --surround-icon: var(--ef_bg0);
   --surround-icon-accent: var(--gf_yellow);
   --surround-icon-hover: var(--gf_red);
   --surround-icon-muted: var(--ef_blue);
@@ -521,7 +521,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
     border-bottom: 3px solid var(--surround-bg-accent) !important
   }
 .workspace-leaf.mod-active .view-header .view-header-icon {
-      color: var(--surround-icon-accent);
+      color: var(--surround-icon);
     }
 .workspace-leaf.mod-active .view-header .view-header-title {
       color: var(--surround-normal);

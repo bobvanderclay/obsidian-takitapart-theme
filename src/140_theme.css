@@ -58,10 +58,10 @@
   --surround-bg: transparent;
   --surround-bg-accent: var(--gf_yellow);
   --surround-normal: var(--ef_bg0);
-  --surround-accent: var(--ef_bg0);
-  --surround-hover: var(--gf_yellow);
+  --surround-accent: var(--gf_yellow);
+  --surround-hover: var(--gf_red);
   --surround-muted: var(--ef_blue);
-  --surround-icon: var(--gf_yellow);
+  --surround-icon: var(--ef_bg0);
   --surround-icon-accent: var(--gf_yellow);
   --surround-icon-hover: var(--gf_red);
   --surround-icon-muted: var(--ef_blue);

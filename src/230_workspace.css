@@ -92,7 +92,7 @@
     border-bottom: 3px solid var(--surround-bg-accent) !important;
 
     & .view-header-icon {
-      color: var(--surround-icon-accent);
+      color: var(--surround-icon);
     }
 
     & .view-header-title {
