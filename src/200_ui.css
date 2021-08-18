@@ -1,2 +1,151 @@
 @import '210_titlebar.css';
 @import '220_statusbar.css';
+@import '230_workspace.css';
+
+/***************************************/
+/*  App Container                      */
+/***************************************/
+body:not(.is-mobile) .app-container {
+  position: absolute;
+  inset: 0;
+}
+
+/***************************************/
+/* Side Dock Ribbons                   */
+/***************************************/
+.side-dock-ribbon {
+  flex: 0 0 var(--workspace-ribbon-size) !important;
+}
+.workspace-ribbon {
+  width: var(--workspace-ribbon-size);
+  -webkit-app-region: drag;
+}
+/* .workspace-split.mod-left-split {
+  margin-left: var(--workspace-ribbon-size);
+}
+.workspace-split.mod-right-split {
+  margin-right: var(--workspace-ribbon-size);
+} */
+.workspace-ribbon-collapse-btn {
+  padding: 20px calc((var(--workspace-ribbon-size) - 16px) / 2);
+}
+.side-dock-ribbon-action {
+  color: var(--side-dock-color);
+}
+
+/***************************************/
+/*            Side panel               */
+/***************************************/
+/* Rounded corners. */
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+  border-radius: 8px 0 0 8px;
+}
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-radius: 0 8px 8px 0;
+}
+
+/* .search-result-file-matched-text {
+  color: var(--text-normal);
+  background-color: var(--text-highlight-bg);
+} */
+
+/* background of search result */
+.search-result {
+  background-color: var(--background-primary);
+  border-radius: 5px;
+}
+
+/* search result in backlink or file search */
+.search-result-file-title {
+  font-size: var(--font-size-side-dock-title);
+}
+
+.search-result-file-matches,
+.search-empty-state {
+  font-size: var(--font-size-side-dock);
+}
+
+/*decrease the spacing between result items*/
+/*.search-result-file-title,*/
+.search-result-file-match {
+  padding: 0px 10px;
+}
+
+.nav-file-title,
+.nav-folder-title {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+.nav-file.is-active > .nav-file-title {
+  background-color: var(--hover-bg) !important;
+}
+/* .nav-file-title:hover, .nav-folder-title:hover {
+  background-color: var(--hover-bg) !important;
+} */
+
+/*backlink pane*/
+.workspace-leaf-content[data-type='backlink'] .view-content {
+  background-color: var(--background-secondary);
+}
+
+.workspace-leaf-content[data-type='tag'] .tag-pane-tag-count,
+.workspace-leaf-content[data-type='tag'] .tag-pane-tag-text {
+  font-size: var(--font-size-side-dock);
+}
+
+.workspace-leaf-content[data-type='backlink'] .search-result-file-matches {
+  font-size: var(--font-size-side-dock);
+}
+
+/***************************************/
+/* Modals                              */
+/***************************************/
+.modal {
+  border: none;
+}
+
+/***************************************/
+/* Vertical Tabs                       */
+/***************************************/
+.vertical-tabs-container {
+}
+.vertical-tabs-container .vertical-tab-header {
+}
+.vertical-tabs-container .vertical-tab-header .vertical-tab-header-group {
+}
+.vertical-tab-header-group-title {
+}
+.vertical-tab-header-group-items {
+}
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+  background-color: transparent;
+}
+.vertical-tab-nav-item.is-active {
+}
+.vertical-tabs-container .vertical-tab-content-container {
+}
+.vertical-tabs-container .vertical-tab-content-container .vertical-tab-content {
+}
+
+/***************************************/
+/*             Tooltip                 */
+/***************************************/
+.tooltip {
+  background-color: white;
+  color: var(--background-primary);
+}
+.tooltip .tooltip-arrow {
+  border-bottom-color: white !important;
+}
+.tooltip.mod-right .tooltip-arrow {
+  border-right-color: white !important;
+  border-bottom-color: transparent !important;
+}
+.tooltip.mod-left .tooltip-arrow {
+  border-left-color: white !important;
+  border-bottom-color: transparent !important;
+}

@@ -1,0 +1,10 @@
+/* Gaps between workspaces. */
+.mod-left-split {
+  padding: 0 8px 0 0;
+}
+.workspace-leaf {
+  padding: 0 8px 0 0 !important;
+}
+.mod-right-split .workspace-leaf {
+  padding: 0;
+}

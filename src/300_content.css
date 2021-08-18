@@ -1,0 +1,307 @@
+@import '350_code.css';
+
+/**************************************/
+/* basic format in EDITOR and PREVIEW */
+/**************************************/
+
+/* font for everything outside of editor/preview panes */
+.app-container {
+  font-family: var(--font-family-preview);
+}
+
+/* set the text selection color for preview mode */
+::selection {
+  background-color: var(--text-selection);
+}
+
+/* normal text outside of headings and code of editor */
+.cm-s-obsidian,
+.mod-single-child .cm-s-obsidian {
+  font-family: var(--font-family-editor);
+  font-size: var(--font-size-normal);
+  padding-top: 5px;
+  padding-left: 1% !important;
+  padding-right: 1% !important;
+}
+
+/* normal text outside of headings and code of preview */
+.markdown-preview-view,
+.mod-single-child .markdown-preview-view {
+  font-family: var(--font-family-editor);
+  font-size: var(--font-size-normal);
+  padding-top: 0px;
+  padding-left: 2% !important;
+  padding-right: 1% !important;
+}
+
+/* bold in preview and editor */
+strong,
+.cm-strong {
+  font-weight: 600;
+}
+
+/* emphasis in preview and editor */
+em,
+.cm-em {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* strikethrough in preview and editor */
+s,
+.cm-strikethrough {
+  color: var(--text-muted);
+}
+
+/* Folding */
+/* .CodeMirror-foldgutter-open {} */
+/* .CodeMirror-foldgutter-open::after {
+  content: "";
+} */
+/* .CodeMirror-foldgutter-folded {} */
+/* .CodeMirror-foldgutter-folded::after {
+  content: "";
+} */
+.CodeMirror-guttermarker-subtle {
+  mix-blend-mode: screen;
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* list in editor */
+span.cm-formatting-list {
+  color: var(--text-accent) !important;
+}
+
+span.cm-formatting-list-ul {
+  visibility: hidden !important;
+}
+span.cm-formatting-list-ul:after {
+  content: '• ';
+  margin-left: -12px;
+  visibility: visible !important;
+}
+
+/* Tasks */
+.cm-formatting-task {
+  color: var(--text-accent) !important;
+  font-family: var(--font-monospace);
+}
+
+/* horizontal line in preview */
+.markdown-preview-view hr {
+  background-color: var(--text-faint) !important;
+}
+
+/* embedded images */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* img hover zoom out img*/
+img:hover {
+  transform: scale(1.04);
+  transition: transform 0.25s ease-in-out 0s;
+}
+
+/*disable image resize in setting pane*/
+.community-theme img:hover {
+  transform: none;
+}
+
+/* Changing size/color of the header hashtags ## */
+.cm-formatting-header {
+  font-size: 1em !important;
+}
+
+/*text between :: show same color as normal text*/
+.cm-formatting-emoji {
+  color: var(--text-normal) !important;
+}
+
+/* vim command dialog */
+.CodeMirror-dialog {
+  background-color: var(--background-secondary);
+  height: 2em;
+}
+
+.CodeMirror-dialog input {
+  font-family: var(--font-family-editor);
+  width: 90%;
+  padding-left: 1px;
+}
+
+/*********************************/
+/* Headings - EDITOR and PREVIEW */
+/*********************************/
+
+/* headings for editor and preview */
+.cm-header-1,
+.markdown-preview-view h1 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h1);
+  color: var(--text-title-h1);
+}
+
+.cm-header-2,
+.markdown-preview-view h2 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h2);
+  color: var(--text-title-h2);
+}
+
+.cm-header-3,
+.markdown-preview-view h3 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  color: var(--text-title-h3);
+}
+
+.cm-header-4,
+.markdown-preview-view h4 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h4);
+  color: var(--text-title-h4);
+}
+
+.cm-header-5,
+.markdown-preview-view h5 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h5);
+  color: var(--text-title-h5);
+}
+
+.cm-header-6,
+.markdown-preview-view h6 {
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h6);
+  color: var(--text-title-h6);
+}
+
+/***************************************/
+/*              Brackets               */
+/***************************************/
+
+.cm-s-obsidian span.cm-formatting-link {
+  color: var(--text-accent) !important;
+}
+
+/***************************************/
+/*             Blockquote              */
+/***************************************/
+
+/* for editor */
+.cm-quote {
+  background-color: var(--pre-code-bg);
+  color: var(--text-normal) !important;
+  font-style: italic;
+}
+
+/* for preview */
+.markdown-preview-view blockquote {
+  background-color: var(--pre-code-bg);
+  border: 0px solid;
+  border-color: var(--blockquote-border) !important;
+  border-left-width: 4px !important;
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5em;
+  margin: 0 10px;
+  font-style: italic;
+}
+
+/***************************************/
+/*             table                   */
+/***************************************/
+th {
+  font-weight: 800 !important;
+}
+
+.markdown-preview-view th {
+  font-weight: 800;
+  background-color: var(--background-secondary) !important;
+}
+
+thead {
+  border-bottom: 3px solid var(--background-modifier-border);
+}
+
+.table {
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* Editor */
+.HyperMD-table-row-1 > span,
+.cm-hmd-table-sep {
+  color: rgb(255, 255, 255, 0.25) !important;
+}
+
+.HyperMD-table-row.HyperMD-table-row-0 {
+  font-weight: bold;
+}
+
+.HyperMD-table-row.HyperMD-table-row-0 .cm-hmd-table-sep {
+  font-weight: normal;
+}
+
+/***************************************/
+/*               Checkbox              */
+/***************************************/
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  content: '✓';
+  position: absolute;
+  color: var(--text-accent);
+  font-size: 1em;
+  line-height: 1.25em;
+  width: 1.2em;
+  text-align: center;
+  text-shadow: 0 0 0.1em var(--text-accent);
+}
+
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  top: 0.2em !important;
+  right: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--text-muted);
+  position: relative;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  box-shadow: 0 0 0.1em var(--text-muted);
+}
+
+.checkbox-container {
+  background-color: var(--background-primary);
+}
+
+/***************************************/
+/*           html in editor            */
+/***************************************/
+
+/* html tags in editor */
+.cm-s-obsidian span.cm-tag {
+  color: var(--inline-code) !important;
+}
+
+/* html attribute and string in editor */
+.cm-s-obsidian span.cm-attribute {
+  color: var(--text-normal) !important;
+}
+
+/* html comments in editor */
+.cm-s-obsidian span.cm-comment {
+  color: var(--text-faint) !important;
+}
