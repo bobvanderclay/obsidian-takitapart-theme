@@ -155,31 +155,6 @@ a:not(.internal-link) {
 }
 
 /***************************************/
-/*             graph view              */
-/***************************************/
-.graph-view.color-circle,
-.graph-view.color-fill-highlight,
-.graph-view.color-line-highlight {
-  color: var(--text-accent) !important;
-}
-
-.graph-view.color-text {
-  color: var(--text-normal) !important;
-}
-
-.graph-view.color-line {
-  color: var(--text-accent-hover);
-}
-
-.graph-view.color-fill {
-  color: var(--text-muted);
-}
-
-.workspace-leaf-content[data-type='graph'] .view-content {
-  background-color: var(--background-primary);
-}
-
-/***************************************/
 /*            settings                 */
 /***************************************/
 
@@ -268,11 +243,4 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 
 .collapse-icon {
   color: var(--text-accent);
-}
-
-/***************************************/
-/*             Suggestion              */
-/***************************************/
-.suggestion-item.is-selected {
-  background-color: rgba(255, 255, 255, 0.1);
 }

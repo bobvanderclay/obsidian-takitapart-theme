@@ -114,24 +114,30 @@ body:not(.is-mobile) .app-container {
 /* Vertical Tabs                       */
 /***************************************/
 .vertical-tabs-container {
-}
-.vertical-tabs-container .vertical-tab-header {
-}
-.vertical-tabs-container .vertical-tab-header .vertical-tab-header-group {
-}
-.vertical-tab-header-group-title {
-}
-.vertical-tab-header-group-items {
-}
-.horizontal-tab-nav-item,
-.vertical-tab-nav-item {
-  background-color: transparent;
-}
-.vertical-tab-nav-item.is-active {
-}
-.vertical-tabs-container .vertical-tab-content-container {
-}
-.vertical-tabs-container .vertical-tab-content-container .vertical-tab-content {
+  & .vertical-tab-header {
+    flex: 0 0 240px;
+
+    & .vertical-tab-header-group {
+      & .vertical-tab-header-group-title {
+      }
+      & .vertical-tab-header-group-items {
+        & .vertical-tab-nav-item {
+          background-color: transparent;
+          font-size: 14px;
+          font-weight: 300;
+          padding: 4px 6px 4px 24px;
+
+          &.is-active {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+  & .vertical-tab-content-container {
+    & .vertical-tab-content {
+    }
+  }
 }
 
 /***************************************/
@@ -201,18 +207,51 @@ body:not(.is-mobile) .app-container {
 /*  workspace-ribbon                   */
 /***************************************/
 .workspace-ribbon-collapse-btn {
-  color: var(--surround-icon-muted);
+  color: var(--surround-muted);
 
   &:hover {
-    color: var(--surround-icon-hover);
+    color: var(--surround-hover);
   }
 }
 
 .side-dock-ribbon-tab,
 .side-dock-ribbon-action {
-  color: var(--surround-icon);
+  color: var(--surround-normal);
 
   &:hover {
-    color: var(--surround-icon-hover);
+    color: var(--surround-hover);
+  }
+}
+
+/***************************************/
+/*  Suggestion                         */
+/***************************************/
+.suggestion-item .suggestion-container {
+  & .suggestion {
+    & .suggestion-item {
+      font-size: 0.9rem;
+
+      &.mod-group {
+        font-size: 0.8rem;
+      }
+
+      &.is-selected {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+/***************************************/
+/*  Menu                               */
+/***************************************/
+.menu {
+  & .menu-item {
+    font-size: 0.8rem;
+    font-weight: 300;
+
+    &:hover:not(.is-disabled):not(.is-label) {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   }
 }

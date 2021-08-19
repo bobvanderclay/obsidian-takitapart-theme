@@ -1,0 +1,24 @@
+/***************************************/
+/*             graph view              */
+/***************************************/
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+  color: var(--text-accent) !important;
+}
+
+.graph-view.color-text {
+  color: var(--text-normal) !important;
+}
+
+.graph-view.color-line {
+  color: var(--text-accent-hover);
+}
+
+.graph-view.color-fill {
+  color: var(--text-muted);
+}
+
+.workspace-leaf-content[data-type='graph'] .view-content {
+  background-color: var(--background-primary);
+}

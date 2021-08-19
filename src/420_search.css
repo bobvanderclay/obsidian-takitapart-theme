@@ -1,0 +1,7 @@
+.search-result-container {
+  & .tree-item.search-result {
+    & .tree-item-inner {
+      color: var(--interactive-normal);
+    }
+  }
+}
