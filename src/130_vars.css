@@ -11,6 +11,10 @@
   --font-size-h4: 18px;
   --font-size-h5: 16px;
   --font-size-h6: 16px;
+
+  /* Interface font */
+  --font-family: Avenir, Avenir Next, sans-serif;
+
   --font-monospace: Iosevka, monospace;
   --font-family-editor: Avenir, Avenir Next, sans-serif;
   --font-family-preview: Avenir, Avenir Next, sans-serif;

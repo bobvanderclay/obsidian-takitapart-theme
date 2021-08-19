@@ -283,10 +283,6 @@ thead {
   box-shadow: 0 0 0.1em var(--text-muted);
 }
 
-.checkbox-container {
-  background-color: var(--background-primary);
-}
-
 /***************************************/
 /*           html in editor            */
 /***************************************/
