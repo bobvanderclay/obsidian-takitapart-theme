@@ -756,6 +756,12 @@ input[type='number'] {
   background-color: var(--background-modifier-form-field);
 }
 /***************************************/
+/*  Nav buttons header                 */
+/***************************************/
+.nav-header .nav-buttons-container .nav-action-button > svg {
+        -webkit-mask-size: auto 75%;
+      }
+/***************************************/
 /*         Code block in  Preview      */
 /***************************************/
 /* code blocks in preview */

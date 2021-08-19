@@ -283,3 +283,16 @@ input[type='number'] {
 .checkbox-container {
   background-color: var(--background-modifier-form-field);
 }
+
+/***************************************/
+/*  Nav buttons header                 */
+/***************************************/
+.nav-header {
+  & .nav-buttons-container {
+    & .nav-action-button {
+      & > svg {
+        -webkit-mask-size: auto 75%;
+      }
+    }
+  }
+}
