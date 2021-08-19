@@ -1,10 +1,9 @@
 /***************************************/
 /*         Code block in  Preview      */
 /***************************************/
-
 /* code blocks in preview */
 pre code {
-  font-family: monaco !important;
+  font-family: var(--font-monospace) !important;
   font-size: var(--font-size-code) !important;
   padding: 6px !important;
   line-height: normal;
@@ -122,6 +121,8 @@ code {
 /*       Code block in Editor          */
 /***************************************/
 /* in-line block for editor */
+.cm-s-obsidian
+  span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight),
 .cm-s-obsidian span.cm-inline-code,
 .cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
 .cm-s-obsidian
@@ -129,6 +130,7 @@ code {
   background-color: var(--pre-code-bg);
   color: var(--inline-code) !important;
   bottom: 0px !important;
+  padding: 2px !important;
 }
 
 /* Editor CodeBlock TEXT Appearance */
@@ -144,6 +146,10 @@ code {
 /*remove the border of codeblock in editor */
 .HyperMD-codeblock-bg {
   border: 0px !important;
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--pre-code-bg);
 }
 
 /*an active line highlight in vim normal mode 
