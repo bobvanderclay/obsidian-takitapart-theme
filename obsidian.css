@@ -115,13 +115,12 @@ settings:
   --font-family-editor: Avenir, Avenir Next, sans-serif;
   --font-family-preview: Avenir, Avenir Next, sans-serif;
 
-  /* --workspace-ribbon-size: 48px;
-  --status-bar-size: 48px;
-  --workspace-tab-header-size: 48px;
-  --view-header-size: 48px; */
-
   /* Header, ribbons, statusbar. */
-  --surround-size: 48px;
+  --surround-size: 56px;
+
+  --workspace-ribbon-size: var(--surround-size);
+  --status-bar-size: var(--surround-size);
+  --workspace-header-size: 48px;
 }
 .theme-light,
 .theme-dark {
@@ -431,7 +430,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 /*  Workspace Tab Header              */
 /**************************************/
 .workspace-tab-header-container {
-  height: var(--surround-size) !important
+  height: var(--workspace-header-size) !important
 }
 .workspace-tab-header-container .workspace-tab-container-inner {
     /* Center icons */
@@ -450,7 +449,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
       color: var(--surround-accent);
     }
 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-      padding: calc((var(--surround-size) - 36px)) 12px !important;
+      padding: calc((var(--workspace-header-size) - 36px)) 12px !important;
     }
 /* Hide tab header bookends */
 .workspace-tab-container-before.is-before-active,
@@ -463,7 +462,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 /*  view header bar                   */
 /**************************************/
 .view-header {
-  height: var(--surround-size) !important;
+  height: var(--workspace-header-size) !important;
   background-color: transparent !important;
   border: none !important
 }
@@ -507,15 +506,19 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 .workspace-leaf.mod-active .view-header .view-header-title {
       color: var(--surround-normal);
     }
+.view-content {
+  height: calc(100% - var(--workspace-header-size));
+}
 /***************************************/
 /*  App Container                      */
 /***************************************/
 body:not(.is-mobile) .app-container {
   position: absolute;
-  inset: 0;
+  inset: calc(var(--surround-size) - var(--workspace-header-size)) 0 0 0;
 }
 .app-container {
   background-color: var(--surround-bg);
+  height: auto;
 }
 /***************************************/
 /* Side Dock Ribbons                   */
@@ -544,10 +547,10 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /* Rounded corners. */
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
-  border-radius: 8px 0 0 8px;
+  border-radius: 4px 0 0 4px;
 }
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-  border-radius: 0 8px 8px 0;
+  border-radius: 0 4px 4px 0;
 }
 /* .search-result-file-matched-text {
   color: var(--text-normal);

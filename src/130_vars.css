@@ -19,11 +19,10 @@
   --font-family-editor: Avenir, Avenir Next, sans-serif;
   --font-family-preview: Avenir, Avenir Next, sans-serif;
 
-  /* --workspace-ribbon-size: 48px;
-  --status-bar-size: 48px;
-  --workspace-tab-header-size: 48px;
-  --view-header-size: 48px; */
-
   /* Header, ribbons, statusbar. */
-  --surround-size: 48px;
+  --surround-size: 56px;
+
+  --workspace-ribbon-size: var(--surround-size);
+  --status-bar-size: var(--surround-size);
+  --workspace-header-size: 48px;
 }

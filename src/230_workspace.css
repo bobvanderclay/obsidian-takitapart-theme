@@ -13,7 +13,7 @@
 /*  Workspace Tab Header              */
 /**************************************/
 .workspace-tab-header-container {
-  height: var(--surround-size) !important;
+  height: var(--workspace-header-size) !important;
 
   & .workspace-tab-container-inner {
     /* Center icons */
@@ -35,7 +35,7 @@
     }
 
     & .workspace-tab-header-inner {
-      padding: calc((var(--surround-size) - 36px)) 12px !important;
+      padding: calc((var(--workspace-header-size) - 36px)) 12px !important;
     }
   }
 }
@@ -52,7 +52,7 @@
 /*  view header bar                   */
 /**************************************/
 .view-header {
-  height: var(--surround-size) !important;
+  height: var(--workspace-header-size) !important;
   background-color: transparent !important;
   border: none !important;
 
@@ -109,4 +109,8 @@
       color: var(--surround-normal);
     }
   }
+}
+
+.view-content {
+  height: calc(100% - var(--workspace-header-size));
 }
