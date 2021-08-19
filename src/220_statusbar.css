@@ -7,3 +7,13 @@
   line-height: var(--status-bar-size);
   -webkit-app-region: drag;
 }
+
+/* The default app.css sets a margin when translucent. */
+/* Unsure why, but it breaks the draggability in the corners. */
+/* Instead, pad it by the ribbon width. */
+body.is-translucent {
+  & .status-bar {
+    margin: 0;
+    padding: 0 var(--workspace-ribbon-size);
+  }
+}
