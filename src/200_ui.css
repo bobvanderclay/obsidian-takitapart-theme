@@ -18,10 +18,10 @@ body:not(.is-mobile) .app-container {
 /* Side Dock Ribbons                   */
 /***************************************/
 .side-dock-ribbon {
-  flex: 0 0 var(--surround-size) !important;
+  flex: 0 0 var(--workspace-ribbon-size) !important;
 }
 .workspace-ribbon {
-  width: var(--surround-size);
+  width: var(--workspace-ribbon-size);
   -webkit-app-region: drag;
 }
 /* .workspace-split.mod-left-split {
@@ -31,7 +31,7 @@ body:not(.is-mobile) .app-container {
   margin-right: var(--workspace-ribbon-size);
 } */
 .workspace-ribbon-collapse-btn {
-  padding: 20px calc((var(--surround-size) - 16px) / 2);
+  padding: 20px calc((var(--workspace-ribbon-size) - 16px) / 2);
 }
 .side-dock-ribbon-action {
   color: var(--side-dock-color);

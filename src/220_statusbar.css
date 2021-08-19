@@ -3,7 +3,7 @@
   font-size: var(--font-size-status-bar);
   background-color: var(--surround-bg);
   border-top: 0px;
-  max-height: var(--surround-size);
-  line-height: var(--surround-size);
+  max-height: var(--status-bar-size);
+  line-height: var(--status-bar-size);
   -webkit-app-region: drag;
 }

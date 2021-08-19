@@ -118,8 +118,8 @@ settings:
   /* Header, ribbons, statusbar. */
   --surround-size: 56px;
 
-  --workspace-ribbon-size: var(--surround-size);
-  --status-bar-size: var(--surround-size);
+  --workspace-ribbon-size: 48px;
+  --status-bar-size: 48px;
   --workspace-header-size: 48px;
 }
 .theme-light,
@@ -412,8 +412,8 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
   font-size: var(--font-size-status-bar);
   background-color: var(--surround-bg);
   border-top: 0px;
-  max-height: var(--surround-size);
-  line-height: var(--surround-size);
+  max-height: var(--status-bar-size);
+  line-height: var(--status-bar-size);
   -webkit-app-region: drag;
 }
 /* Gaps between workspaces. */
@@ -524,10 +524,10 @@ body:not(.is-mobile) .app-container {
 /* Side Dock Ribbons                   */
 /***************************************/
 .side-dock-ribbon {
-  flex: 0 0 var(--surround-size) !important;
+  flex: 0 0 var(--workspace-ribbon-size) !important;
 }
 .workspace-ribbon {
-  width: var(--surround-size);
+  width: var(--workspace-ribbon-size);
   -webkit-app-region: drag;
 }
 /* .workspace-split.mod-left-split {
@@ -537,7 +537,7 @@ body:not(.is-mobile) .app-container {
   margin-right: var(--workspace-ribbon-size);
 } */
 .workspace-ribbon-collapse-btn {
-  padding: 20px calc((var(--surround-size) - 16px) / 2);
+  padding: 20px calc((var(--workspace-ribbon-size) - 16px) / 2);
 }
 .side-dock-ribbon-action {
   color: var(--side-dock-color);

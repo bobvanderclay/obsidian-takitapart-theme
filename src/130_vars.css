@@ -22,7 +22,7 @@
   /* Header, ribbons, statusbar. */
   --surround-size: 56px;
 
-  --workspace-ribbon-size: var(--surround-size);
-  --status-bar-size: var(--surround-size);
+  --workspace-ribbon-size: 48px;
+  --status-bar-size: 48px;
   --workspace-header-size: 48px;
 }
