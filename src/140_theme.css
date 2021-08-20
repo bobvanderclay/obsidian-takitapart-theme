@@ -3,7 +3,7 @@
   --background-primary: var(--ef_bg0);
   --background-primary-alt: var(--ef_bg0);
   --background-secondary: var(--ef_bg0);
-  --background-secondary-alt: transparent;
+  --background-secondary-alt: var(--ef_bg2);
   --background-accent: #fff;
   --background-modifier-border: var(--base02);
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);

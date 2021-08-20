@@ -1,5 +1,5 @@
 .titlebar {
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--surround-bg) !important;
 }
 
 .titlebar-button-container {

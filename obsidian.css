@@ -127,7 +127,7 @@ settings:
   --background-primary: var(--ef_bg0);
   --background-primary-alt: var(--ef_bg0);
   --background-secondary: var(--ef_bg0);
-  --background-secondary-alt: transparent;
+  --background-secondary-alt: var(--ef_bg2);
   --background-accent: #fff;
   --background-modifier-border: var(--base02);
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);
@@ -399,7 +399,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
   color: var(--text-accent);
 }
 .titlebar {
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--surround-bg) !important;
 }
 .titlebar-button-container {
   top: 0 !important;
@@ -415,6 +415,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
   max-height: var(--status-bar-size);
   line-height: var(--status-bar-size);
   -webkit-app-region: drag;
+  border-top: none;
 }
 /* The default app.css sets a margin when translucent. */
 /* Unsure why, but it breaks the draggability in the corners. */
@@ -422,6 +423,7 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 body.is-translucent .status-bar {
     margin: 0;
     padding: 0 var(--workspace-ribbon-size);
+    border-top: none;
   }
 /* Gaps between workspaces. */
 .mod-left-split {
@@ -436,8 +438,12 @@ body.is-translucent .status-bar {
 /**************************************/
 /*  Workspace Tab Header              */
 /**************************************/
+.workspace-tabs {
+  background-color: var(--surround-bg);
+}
 .workspace-tab-header-container {
-  height: var(--workspace-header-size) !important
+  height: var(--workspace-header-size) !important;
+  background-color: var(--surround-bg)
 }
 .workspace-tab-header-container .workspace-tab-container-inner {
     /* Center icons */
@@ -468,6 +474,12 @@ body.is-translucent .status-bar {
 .workspace-tab-header.is-before-active,
 .workspace-tab-header.is-after-active,
 .workspace-tab-container-after.is-after-active {
+  background-color: transparent !important;
+}
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner {
   background-color: transparent !important;
 }
 /**************************************/
@@ -543,6 +555,7 @@ body:not(.is-mobile) .app-container {
 .workspace-ribbon {
   width: var(--workspace-ribbon-size);
   -webkit-app-region: drag;
+  background-color: var(--surround-bg);
 }
 /* .workspace-split.mod-left-split {
   margin-left: var(--workspace-ribbon-size);
@@ -615,16 +628,17 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /* Modals                              */
 /***************************************/
-.modal_container .modal-bg {
+.modal-container .modal-bg {
   }
-.modal_container .modal {
-    border: none
+.modal-container .modal {
+    border: none;
+    box-shadow: none
   }
-.modal_container .modal .modal-close-button {
+.modal-container .modal .modal-close-button {
     }
-.modal_container .modal .modal-title {
+.modal-container .modal .modal-title {
     }
-.modal_container .modal .modal-content .modal-button-container {
+.modal-container .modal .modal-content .modal-button-container {
       }
 /***************************************/
 /*             Tooltip                 */
@@ -647,6 +661,9 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /*  resize-handle and borders          */
 /***************************************/
+.workspace-split.mod-root {
+  background-color: var(--surround-bg);
+}
 /*vertical resize-handle*/
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,
@@ -1191,7 +1208,8 @@ thead {
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header {
         flex: 0 0 240px;
         background-color: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(48px)
+        backdrop-filter: blur(48px);
+        padding: 24px 0
       }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-title {
             color: var(--interactive-normal);
@@ -1209,7 +1227,8 @@ thead {
                 color: var(--text-normal);
               }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container {
-        background: var(--background-primary)
+        background: var(--background-primary);
+        padding: 48px 20px 24px 0
       }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .setting-item.setting-item-heading .setting-item-name {
                 color: var(--interactive-normal);
@@ -1218,6 +1237,9 @@ thead {
             }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .setting-item .setting-item-control {
             }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .hotkey-settings-container {
+            margin-right: -28px;
+          }
 /* Mobile */
 body:not(.no-svg-replace) svg.add-note-glyph,
   body:not(.no-svg-replace) svg.any-key,

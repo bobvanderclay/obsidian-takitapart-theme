@@ -23,6 +23,7 @@ body:not(.is-mobile) .app-container {
 .workspace-ribbon {
   width: var(--workspace-ribbon-size);
   -webkit-app-region: drag;
+  background-color: var(--surround-bg);
 }
 /* .workspace-split.mod-left-split {
   margin-left: var(--workspace-ribbon-size);
@@ -107,11 +108,12 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /* Modals                              */
 /***************************************/
-.modal_container {
+.modal-container {
   & .modal-bg {
   }
   & .modal {
     border: none;
+    box-shadow: none;
 
     & .modal-close-button {
     }
@@ -146,6 +148,10 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /*  resize-handle and borders          */
 /***************************************/
+.workspace-split.mod-root {
+  background-color: var(--surround-bg);
+}
+
 /*vertical resize-handle*/
 .workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
 .workspace-split.mod-left-split > .workspace-leaf-resize-handle,

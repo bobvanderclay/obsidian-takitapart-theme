@@ -9,6 +9,7 @@
         flex: 0 0 240px;
         background-color: rgba(255, 255, 255, 0.25);
         backdrop-filter: blur(48px);
+        padding: 24px 0;
 
         & .vertical-tab-header-group {
           & .vertical-tab-header-group-title {
@@ -33,6 +34,7 @@
       }
       & .vertical-tab-content-container {
         background: var(--background-primary);
+        padding: 48px 20px 24px 0;
 
         & .vertical-tab-content {
           & .setting-item {
@@ -47,6 +49,10 @@
 
             & .setting-item-control {
             }
+          }
+
+          & .hotkey-settings-container {
+            margin-right: -28px;
           }
         }
       }
