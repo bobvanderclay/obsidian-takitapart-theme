@@ -615,28 +615,17 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /* Modals                              */
 /***************************************/
-.modal {
-  border: none;
-}
-/***************************************/
-/* Vertical Tabs                       */
-/***************************************/
-.vertical-tabs-container .vertical-tab-header {
-    flex: 0 0 240px
+.modal_container .modal-bg {
   }
-.vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-title {
-      }
-.vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-items .vertical-tab-nav-item {
-          background-color: transparent;
-          font-size: 14px;
-          font-weight: 300;
-          padding: 4px 6px 4px 24px
-        }
-.vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-items .vertical-tab-nav-item.is-active {
-            background-color: rgba(0, 0, 0, 0.1);
-          }
-.vertical-tabs-container .vertical-tab-content-container .vertical-tab-content {
+.modal_container .modal {
+    border: none
+  }
+.modal_container .modal .modal-close-button {
     }
+.modal_container .modal .modal-title {
+    }
+.modal_container .modal .modal-content .modal-button-container {
+      }
 /***************************************/
 /*             Tooltip                 */
 /***************************************/
@@ -723,6 +712,8 @@ body:not(.is-mobile) .app-container {
 .suggestion-container .suggestion .suggestion-item:not(.mod-group):hover {
         background-color: var(--background-modifier-form-field);
       }
+.suggestion-container .prompt-instructions .prompt-instruction {
+    }
 /***************************************/
 /*  Menu                               */
 /***************************************/
@@ -1191,6 +1182,42 @@ thead {
 .search-result-container .tree-item.search-result .tree-item-inner {
       color: var(--interactive-normal);
     }
+.modal.mod-settings {
+  background: var(--surround-bg)
+}
+.modal.mod-settings .modal-content {
+    padding-right: 0
+  }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header {
+        flex: 0 0 240px;
+        background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(48px)
+      }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-title {
+            color: var(--interactive-normal);
+          }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-items .vertical-tab-nav-item {
+              background-color: transparent;
+              font-size: 14px;
+              font-weight: 300;
+              padding: 6px 6px 6px 24px;
+              line-height: 1.3;
+              color: var(--text-muted)
+            }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-items .vertical-tab-nav-item.is-active {
+                background-color: rgba(0, 0, 0, 0.1);
+                color: var(--text-normal);
+              }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container {
+        background: var(--background-primary)
+      }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .setting-item.setting-item-heading .setting-item-name {
+                color: var(--interactive-normal);
+              }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .setting-item .setting-item-info {
+            }
+.modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .setting-item .setting-item-control {
+            }
 /* Mobile */
 body:not(.no-svg-replace) svg.add-note-glyph,
   body:not(.no-svg-replace) svg.any-key,

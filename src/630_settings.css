@@ -1,0 +1,55 @@
+.modal.mod-settings {
+  background: var(--surround-bg);
+
+  & .modal-content {
+    padding-right: 0;
+
+    & .vertical-tabs-container {
+      & .vertical-tab-header {
+        flex: 0 0 240px;
+        background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(48px);
+
+        & .vertical-tab-header-group {
+          & .vertical-tab-header-group-title {
+            color: var(--interactive-normal);
+          }
+          & .vertical-tab-header-group-items {
+            & .vertical-tab-nav-item {
+              background-color: transparent;
+              font-size: 14px;
+              font-weight: 300;
+              padding: 6px 6px 6px 24px;
+              line-height: 1.3;
+              color: var(--text-muted);
+
+              &.is-active {
+                background-color: rgba(0, 0, 0, 0.1);
+                color: var(--text-normal);
+              }
+            }
+          }
+        }
+      }
+      & .vertical-tab-content-container {
+        background: var(--background-primary);
+
+        & .vertical-tab-content {
+          & .setting-item {
+            &.setting-item-heading {
+              & .setting-item-name {
+                color: var(--interactive-normal);
+              }
+            }
+
+            & .setting-item-info {
+            }
+
+            & .setting-item-control {
+            }
+          }
+        }
+      }
+    }
+  }
+}

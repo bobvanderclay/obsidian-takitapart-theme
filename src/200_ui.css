@@ -107,36 +107,19 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /* Modals                              */
 /***************************************/
-.modal {
-  border: none;
-}
-
-/***************************************/
-/* Vertical Tabs                       */
-/***************************************/
-.vertical-tabs-container {
-  & .vertical-tab-header {
-    flex: 0 0 240px;
-
-    & .vertical-tab-header-group {
-      & .vertical-tab-header-group-title {
-      }
-      & .vertical-tab-header-group-items {
-        & .vertical-tab-nav-item {
-          background-color: transparent;
-          font-size: 14px;
-          font-weight: 300;
-          padding: 4px 6px 4px 24px;
-
-          &.is-active {
-            background-color: rgba(0, 0, 0, 0.1);
-          }
-        }
-      }
-    }
+.modal_container {
+  & .modal-bg {
   }
-  & .vertical-tab-content-container {
-    & .vertical-tab-content {
+  & .modal {
+    border: none;
+
+    & .modal-close-button {
+    }
+    & .modal-title {
+    }
+    & .modal-content {
+      & .modal-button-container {
+      }
     }
   }
 }
@@ -243,6 +226,10 @@ body:not(.is-mobile) .app-container {
       &:not(.mod-group):hover {
         background-color: var(--background-modifier-form-field);
       }
+    }
+  }
+  & .prompt-instructions {
+    & .prompt-instruction {
     }
   }
 }
