@@ -182,6 +182,8 @@ settings:
   --hover-bg: rgba(0, 0, 0, 0.5);
   --side-dock-color: var(--ef_bg0);
 
+  --background-modifier-hover: rgba(0, 0, 0, 0.1);
+
   --surround-bg: transparent;
   --surround-normal: var(--ef_bg0);
   --surround-accent: var(--gf_yellow);
@@ -726,15 +728,12 @@ body:not(.is-mobile) .app-container {
 /* Modals                              */
 /***************************************/
 .modal-container .modal-bg {
-    /* background-color: rgba(0, 0, 0, 1);
-    backdrop-filter: blur(48px); */
-    /* background-color: rgba(0, 0, 0, 1); */
-    /* backdrop-filter: invert(100%) sepia(100%) hue-rotate(185deg) grayscale(50%)
-      contrast(20%) brightness(125%); */
+    backdrop-filter: contrast(75%) brightness(100%);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 .modal-container .modal {
     border: none;
-    box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.1)
+    box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.25)
   }
 .modal-container .modal .modal-close-button {
     }
@@ -742,6 +741,12 @@ body:not(.is-mobile) .app-container {
     }
 .modal-container .modal .modal-content .modal-button-container {
       }
+/* Only last modal backdrop? */
+.modal-container:last-child .modal-bg {
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /* backdrop-filter: invert(100%) sepia(100%) hue-rotate(185deg) grayscale(50%)
+      contrast(20%) brightness(125%); */
+  }
 /***************************************/
 /*             Tooltip                 */
 /***************************************/
@@ -864,6 +869,12 @@ input[type='number'] {
 }
 .checkbox-container {
   background-color: var(--background-modifier-form-field);
+}
+textarea {
+  font-size: 14px;
+}
+input[type='checkbox'] {
+  filter: hue-rotate(-25deg) saturate(50%);
 }
 /***************************************/
 /*  Nav buttons header                 */
@@ -1341,9 +1352,7 @@ thead {
   }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header {
         flex: 0 0 240px;
-        background-color: var(--ef_bg4);
-        /* background-color: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(48px); */
+        background-color: var(--ef_bg2);
         padding: 24px 0
       }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-title {
@@ -1388,6 +1397,32 @@ thead {
 .workspace-leaf-content[data-type='file-explorer']::after {
     content: 'File Explorer';
   }
+.modal.mod-sync-history .modal-content {
+    padding: 0
+  }
+.modal.mod-sync-history .modal-content .sync-history-list-container {
+      flex-basis: 240px;
+    }
+.modal.mod-sync-history .modal-content .sync-history-content-container {
+      padding: 48px 48px 24px 48px;
+    }
+.sync-file-tree-container {
+  font-size: 14px
+}
+.sync-file-tree-container .file-tree-item {
+    padding: 0
+  }
+.sync-file-tree-container .file-tree-item .file-tree-item-header:hover {
+        background-color: var(--background-modifier-hover);
+      }
+.sync-file-tree-container .file-tree-item .file-tree-item-header.is-selected {
+        background-color: transparent
+      }
+.sync-file-tree-container .file-tree-item .file-tree-item-header.is-selected:hover {
+          background-color: var(--background-modifier-hover);
+        }
+.sync-file-tree-container .file-tree-item .file-tree-item-header .file-tree-item-checkbox {
+      }
 .workspace-leaf-content[data-type='outline'] {
   /* background-color: var(--ef_bg_red) !important; */
 }

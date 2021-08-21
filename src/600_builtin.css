@@ -3,6 +3,7 @@
 @import '630_settings.css';
 @import '640_starred.css';
 @import '650_file-explorer.css';
+@import '660_sync.css';
 
 .workspace-leaf-content[data-type='outline'] {
   /* background-color: var(--ef_bg_red) !important; */

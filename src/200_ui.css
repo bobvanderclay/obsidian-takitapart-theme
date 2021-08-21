@@ -85,15 +85,12 @@ body:not(.is-mobile) {
 /***************************************/
 .modal-container {
   & .modal-bg {
-    /* background-color: rgba(0, 0, 0, 1);
-    backdrop-filter: blur(48px); */
-    /* background-color: rgba(0, 0, 0, 1); */
-    /* backdrop-filter: invert(100%) sepia(100%) hue-rotate(185deg) grayscale(50%)
-      contrast(20%) brightness(125%); */
+    backdrop-filter: contrast(75%) brightness(100%);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   & .modal {
     border: none;
-    box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.25);
 
     & .modal-close-button {
     }
@@ -103,6 +100,14 @@ body:not(.is-mobile) {
       & .modal-button-container {
       }
     }
+  }
+}
+/* Only last modal backdrop? */
+.modal-container:last-child {
+  & .modal-bg {
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    /* backdrop-filter: invert(100%) sepia(100%) hue-rotate(185deg) grayscale(50%)
+      contrast(20%) brightness(125%); */
   }
 }
 
@@ -255,6 +260,12 @@ input[type='number'] {
 }
 .checkbox-container {
   background-color: var(--background-modifier-form-field);
+}
+textarea {
+  font-size: 14px;
+}
+input[type='checkbox'] {
+  filter: hue-rotate(-25deg) saturate(50%);
 }
 
 /***************************************/

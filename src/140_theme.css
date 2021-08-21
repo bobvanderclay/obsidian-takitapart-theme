@@ -55,6 +55,8 @@
   --hover-bg: rgba(0, 0, 0, 0.5);
   --side-dock-color: var(--ef_bg0);
 
+  --background-modifier-hover: rgba(0, 0, 0, 0.1);
+
   --surround-bg: transparent;
   --surround-normal: var(--ef_bg0);
   --surround-accent: var(--gf_yellow);
