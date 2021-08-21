@@ -1,0 +1,7 @@
+.workspace-leaf-content[data-type='calendar'] {
+  /* background-color: var(--ef_bg_green) !important; */
+
+  &::after {
+    content: 'Calendar';
+  }
+}

@@ -1,5 +1,9 @@
 .workspace-leaf-content[data-type='search'] {
   background-color: var(--ef_bg_red) !important;
+
+  &::after {
+    content: 'Search';
+  }
 }
 
 .search-result-container {

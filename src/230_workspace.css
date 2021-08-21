@@ -26,6 +26,9 @@ https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-
 }
 .workspace-split {
   & > .workspace-tabs ~ .workspace-tabs {
+    & .workspace-tab-header-container {
+      margin-top: var(--workspace-leaf-gap);
+    }
     & .workspace-leaf {
       margin-top: var(--workspace-leaf-gap);
     }
@@ -68,6 +71,17 @@ so that panes may have styles per type. */
   & .workspace-leaf {
     & .workspace-leaf-content {
       padding-top: var(--workspace-header-size);
+
+      /* Set up pseudo element for tab name */
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 48px;
+        line-height: var(--surround-size) !important;
+        color: var(--text-muted);
+        font-size: 16px;
+        font-weight: 600;
+      }
     }
   }
 }
@@ -84,7 +98,6 @@ so that panes may have styles per type. */
   z-index: 1;
   position: absolute;
   inset: 0;
-  margin-top: var(--workspace-leaf-gap);
   padding: 0;
   height: var(--workspace-header-size) !important;
   background-color: transparent !important;
@@ -121,7 +134,7 @@ so that panes may have styles per type. */
 
     &.is-active {
       background-color: transparent !important;
-      color: var(--text-normal) !important;
+      color: var(--text-muted) !important;
       margin: 4px;
       border-radius: 5px;
       cursor: grab;

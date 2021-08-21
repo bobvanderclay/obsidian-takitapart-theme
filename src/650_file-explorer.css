@@ -1,0 +1,7 @@
+.workspace-leaf-content[data-type='file-explorer'] {
+  /* background-color: var(--ef_bg_green) !important; */
+
+  &::after {
+    content: 'File Explorer';
+  }
+}

@@ -482,6 +482,9 @@ https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-
       margin-top: 0;
       padding: 0 !important;
     }
+.workspace-split > .workspace-tabs ~ .workspace-tabs .workspace-tab-header-container {
+      margin-top: var(--workspace-leaf-gap);
+    }
 .workspace-split > .workspace-tabs ~ .workspace-tabs .workspace-leaf {
       margin-top: var(--workspace-leaf-gap);
     }
@@ -508,8 +511,19 @@ https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-
 /* Workspace leaf content is moved up behind the header, 
 so that panes may have styles per type. */
 .workspace-tabs .workspace-leaf .workspace-leaf-content {
-      padding-top: var(--workspace-header-size);
+      padding-top: var(--workspace-header-size)
+
+      /* Set up pseudo element for tab name */
     }
+.workspace-tabs .workspace-leaf .workspace-leaf-content::after {
+        position: absolute;
+        top: 0;
+        left: 48px;
+        line-height: var(--surround-size) !important;
+        color: var(--text-muted);
+        font-size: 16px;
+        font-weight: 600;
+      }
 /**************************************/
 /*  Workspace Tab Header              */
 /**************************************/
@@ -522,7 +536,6 @@ so that panes may have styles per type. */
   z-index: 1;
   position: absolute;
   inset: 0;
-  margin-top: var(--workspace-leaf-gap);
   padding: 0;
   height: var(--workspace-header-size) !important;
   background-color: transparent !important;
@@ -556,7 +569,7 @@ so that panes may have styles per type. */
     }
 .workspace-tab-header-container .workspace-tab-header.is-active {
       background-color: transparent !important;
-      color: var(--text-normal) !important;
+      color: var(--text-muted) !important;
       margin: 4px;
       border-radius: 5px;
       cursor: grab
@@ -1288,8 +1301,11 @@ thead {
   background-color: var(--background-primary);
 }
 .workspace-leaf-content[data-type='search'] {
-  background-color: var(--ef_bg_red) !important;
+  background-color: var(--ef_bg_red) !important
 }
+.workspace-leaf-content[data-type='search']::after {
+    content: 'Search';
+  }
 .search-result-container .tree-item.search-result {
     /* background-color: var(--background-primary);
     border-radius: 5px; */
@@ -1362,8 +1378,17 @@ thead {
             margin-right: -28px;
           }
 .workspace-leaf-content[data-type='starred'] {
-  background-color: var(--ef_bg_green) !important;
+  background-color: var(--ef_bg_green) !important
 }
+.workspace-leaf-content[data-type='starred']::after {
+    content: 'Starred';
+  }
+.workspace-leaf-content[data-type='file-explorer'] {
+  /* background-color: var(--ef_bg_green) !important; */
+}
+.workspace-leaf-content[data-type='file-explorer']::after {
+    content: 'File Explorer';
+  }
 /* Mobile */
 body:not(.no-svg-replace) svg.add-note-glyph,
   body:not(.no-svg-replace) svg.any-key,
@@ -2085,4 +2110,9 @@ body:not(.no-svg-replace) svg.yesterday-glyph {
 body:not(.no-svg-replace) svg.templater-icon {
     -webkit-mask-image: url('data:image/svg+xml;utf8,');
   }
-/* Plugins */
+.workspace-leaf-content[data-type='calendar'] {
+  /* background-color: var(--ef_bg_green) !important; */
+}
+.workspace-leaf-content[data-type='calendar']::after {
+    content: 'Calendar';
+  }
