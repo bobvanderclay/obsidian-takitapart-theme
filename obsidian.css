@@ -726,10 +726,15 @@ body:not(.is-mobile) .app-container {
 /* Modals                              */
 /***************************************/
 .modal-container .modal-bg {
+    /* background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(48px); */
+    background-color: transparent;
+    backdrop-filter: invert(100%) sepia(100%) hue-rotate(185deg) grayscale(50%)
+      contrast(20%) brightness(125%);
   }
 .modal-container .modal {
     border: none;
-    box-shadow: none
+    box-shadow: 0 0 48px 0 rgba(0, 0, 0, 0.1)
   }
 .modal-container .modal .modal-close-button {
     }
@@ -1336,8 +1341,9 @@ thead {
   }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header {
         flex: 0 0 240px;
-        background-color: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(48px);
+        background-color: var(--ef_bg4);
+        /* background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(48px); */
         padding: 24px 0
       }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-header .vertical-tab-header-group .vertical-tab-header-group-title {

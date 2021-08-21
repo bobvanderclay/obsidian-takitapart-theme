@@ -7,8 +7,9 @@
     & .vertical-tabs-container {
       & .vertical-tab-header {
         flex: 0 0 240px;
-        background-color: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(48px);
+        background-color: var(--ef_bg4);
+        /* background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(48px); */
         padding: 24px 0;
 
         & .vertical-tab-header-group {
