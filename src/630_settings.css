@@ -14,6 +14,7 @@
         & .vertical-tab-header-group {
           & .vertical-tab-header-group-title {
             color: var(--interactive-normal);
+            font-weight: 600;
           }
           & .vertical-tab-header-group-items {
             & .vertical-tab-nav-item {

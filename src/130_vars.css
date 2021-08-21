@@ -20,9 +20,12 @@
   --font-family-preview: var(--default-font);
 
   /* Header, ribbons, statusbar. */
-  --surround-size: 56px;
+  --surround-size: 48px;
 
+  --titlebar-size: 48px;
   --workspace-ribbon-size: 48px;
   --status-bar-size: 48px;
   --workspace-header-size: 48px;
+
+  --workspace-leaf-gap: 8px;
 }

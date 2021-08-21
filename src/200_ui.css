@@ -6,12 +6,12 @@
 /*  App Container                      */
 /***************************************/
 body:not(.is-mobile) .app-container {
-  position: absolute;
-  inset: calc(var(--surround-size) - var(--workspace-header-size)) 0 0 0;
+  padding-top: calc(
+    var(--titlebar-size) - calc(24px + var(--workspace-leaf-gap))
+  );
 }
 .app-container {
   background-color: var(--surround-bg);
-  height: auto;
 }
 
 /***************************************/
@@ -43,10 +43,10 @@ body:not(.is-mobile) .app-container {
 /***************************************/
 /* Rounded corners. */
 .workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
-  border-radius: 4px 0 0 4px;
+  border-radius: 0;
 }
 .workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-  border-radius: 0 4px 4px 0;
+  border-radius: 0;
 }
 
 /* .search-result-file-matched-text {

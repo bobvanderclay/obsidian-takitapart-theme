@@ -1,9 +1,11 @@
 .titlebar {
   background-color: var(--surround-bg) !important;
+  height: var(--titlebar-size) !important;
+  padding: 0;
 }
 
 .titlebar-button-container {
-  top: 0 !important;
+  /* top: 0 !important; */
 }
 
 .titlebar-text {
