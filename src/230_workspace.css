@@ -1,3 +1,11 @@
+/**************************************/
+/*  workspace-leaves                  */
+/**************************************/
+.workspace-leaf {
+  & .workspace-leaf-content {
+  }
+}
+
 /* Gaps between workspaces. */
 .mod-left-split {
   padding: 0 var(--workspace-leaf-gap) 0 0;
@@ -15,25 +23,12 @@
   padding: 0;
 }
 
-/**************************************/
-/*  workspace-leaves                  */
-/**************************************/
-.workspace-leaf {
-  /* background-color: transparent !important; */
-  & .workspace-leaf-content {
-    /* background-color: var(--background-primary) !important; */
-  }
-  & .workspace-leaf-content[data-type='starred'] {
-    background-color: var(--ef_bg_green) !important;
-  }
-  & .workspace-leaf-content[data-type='search'] {
-    background-color: var(--ef_bg_red) !important;
-  }
-}
+/* Workspace leaf content is moved up behind the header, 
+so that panes may have styles per type. */
 .workspace-tabs {
   & .workspace-leaf {
     & .workspace-leaf-content {
-      padding-top: 48px;
+      padding-top: var(--workspace-header-size);
     }
   }
 }
@@ -89,6 +84,7 @@
       color: var(--text-normal) !important;
       margin: 4px;
       border-radius: 5px;
+      cursor: grab;
 
       & .workspace-tab-header-inner {
         padding: calc((var(--workspace-header-size) - 40px)) 12px !important;
@@ -178,15 +174,14 @@
 /* Active view */
 .workspace-leaf.mod-active {
   & .view-header {
-    /* background-color: var(--gf_yellow) !important; */
-    border-bottom: 2px solid var(--gf_blue) !important;
+    border-bottom: 2px solid var(--ef_blue) !important;
 
     & .view-header-icon {
-      color: var(--gf_blue);
+      color: var(--ef_blue);
     }
 
     & .view-header-title {
-      color: var(--gf_blue);
+      color: var(--ef_blue);
     }
 
     & .view-actions {

@@ -1,7 +1,43 @@
+.workspace-leaf-content[data-type='search'] {
+  background-color: var(--ef_bg_red) !important;
+}
+
 .search-result-container {
   & .tree-item.search-result {
+    /* background-color: var(--background-primary);
+    border-radius: 5px; */
+
+    & .tree-item-icon {
+    }
+
     & .tree-item-inner {
       color: var(--interactive-normal);
+    }
+
+    & .tree-item-flair {
+      background-color: var(--background-modifier-form-field);
+    }
+
+    & .search-result-file-title {
+      font-size: var(--font-size-side-dock-title);
+    }
+
+    & .search-result-file-matches,
+    & .search-empty-state {
+      font-size: var(--font-size-side-dock);
+      border-bottom: none;
+
+      & .search-result-file-match {
+        padding: 0px 10px;
+
+        &:after {
+          display: none;
+        }
+
+        &:hover {
+          background-color: var(--background-modifier-form-field);
+        }
+      }
     }
   }
 }

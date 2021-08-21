@@ -49,33 +49,6 @@ body:not(.is-mobile) .app-container {
   border-radius: 0;
 }
 
-/* .search-result-file-matched-text {
-  color: var(--text-normal);
-  background-color: var(--text-highlight-bg);
-} */
-
-/* background of search result */
-.search-result {
-  background-color: var(--background-primary);
-  border-radius: 5px;
-}
-
-/* search result in backlink or file search */
-.search-result-file-title {
-  font-size: var(--font-size-side-dock-title);
-}
-
-.search-result-file-matches,
-.search-empty-state {
-  font-size: var(--font-size-side-dock);
-}
-
-/*decrease the spacing between result items*/
-/*.search-result-file-title,*/
-.search-result-file-match {
-  padding: 0px 10px;
-}
-
 .nav-file-title,
 .nav-folder-title {
   border-bottom-left-radius: 0 !important;
