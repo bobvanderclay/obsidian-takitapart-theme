@@ -473,26 +473,41 @@ body.is-translucent .status-bar {
   position: absolute;
   inset: 0;
   margin-top: var(--workspace-leaf-gap);
+  padding: 0;
   height: var(--workspace-header-size) !important;
   /* background-color: var(--background-primary) !important; */
   background-color: transparent !important;
-
   border-bottom: 2px solid var(--text-faint) !important
 }
+.workspace-tab-header-container:not(:hover) .workspace-tab-header:not(.is-active) {
+    opacity: 0.1;
+    transition: opacity 0.25s ease-in-out;
+  }
 .workspace-tab-header-container .workspace-tab-container-inner {
     /* Center icons */
     /* margin: 0 auto; */
+    /* Move active icon left, others right */
+    display: flex;
+    flex-direction: row;
+    width: 100%
   }
+.workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header.is-active {
+      order: -1;
+      flex: 2 0 auto;
+    }
+.workspace-tab-header-container .workspace-tab-container-inner .workspace-tab-header:not(.is-active) {
+      flex: 0 0 auto;
+    }
 .workspace-tab-header-container .workspace-tab-header {
-    /* color: var(--ef_blue); */
+    color: var(--text-faint) !important;
     cursor: pointer
   }
 .workspace-tab-header-container .workspace-tab-header:hover {
       color: var(--surround-hover);
     }
 .workspace-tab-header-container .workspace-tab-header.is-active {
-      /* background-color: var(--ef_blue) !important; */
-      color: var(--background-primary);
+      background-color: transparent !important;
+      color: var(--text-normal) !important;
       margin: 4px;
       border-radius: 5px
     }
@@ -502,18 +517,22 @@ body.is-translucent .status-bar {
 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
       padding: calc((var(--workspace-header-size) - 36px)) 12px !important;
     }
-/* Hide tab header bookends */
+/* Remove tab header bookends */
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+  display: none;
+}
 .workspace-tab-container-before.is-before-active,
 .workspace-tab-header.is-before-active,
 .workspace-tab-header.is-after-active,
 .workspace-tab-container-after.is-after-active {
-  background-color: transparent !important;
+  display: none;
 }
 .workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
 .workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-  background-color: transparent !important;
+  display: none;
 }
 /**************************************/
 /*  view header bar                   */
@@ -524,6 +543,10 @@ body.is-translucent .status-bar {
   background-color: var(--background-primary) !important
   /* border: none !important; */
 }
+.view-header:not(:hover) .view-actions {
+    opacity: 0.1;
+    transition: opacity 0.25s ease-in-out;
+  }
 .view-header .view-header-icon,
   .view-header .view-actions {
     padding: calc((var(--surround-size) - 24px) / 2) 10px !important;
@@ -568,11 +591,11 @@ body.is-translucent .status-bar {
       color: var(--gf_blue);
     }
 .workspace-leaf.mod-active .view-header .view-actions .view-action {
-        color: var(--surround-normal)
+        color: var(--surround-muted)
       }
 .workspace-leaf.mod-active .view-header .view-actions .view-action:hover,
         .workspace-leaf.mod-active .view-header .view-actions .view-action.is-active {
-          color: var(--surround-normal);
+          color: var(--surround-hover);
         }
 .view-content {
   height: calc(100% - var(--workspace-header-size));
