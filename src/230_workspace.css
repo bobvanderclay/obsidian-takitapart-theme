@@ -120,12 +120,14 @@ so that panes may have styles per type. */
       flex: 2 0 auto;
     }
     & .workspace-tab-header:not(.is-active) {
+      order: 1;
       flex: 0 0 auto;
     }
   }
 
   & .workspace-tab-header {
     color: var(--text-faint) !important;
+    background-color: transparent !important;
     cursor: pointer;
 
     &:hover {
@@ -133,7 +135,6 @@ so that panes may have styles per type. */
     }
 
     &.is-active {
-      background-color: transparent !important;
       color: var(--text-muted) !important;
       margin: 4px;
       border-radius: 5px;
@@ -155,17 +156,9 @@ so that panes may have styles per type. */
 .workspace-tab-container-after {
   display: none;
 }
-.workspace-tab-container-before.is-before-active,
-.workspace-tab-header.is-before-active,
-.workspace-tab-header.is-after-active,
-.workspace-tab-container-after.is-after-active {
-  display: none;
-}
-.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
-.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
 .workspace-tab-header.is-before-active .workspace-tab-header-inner,
 .workspace-tab-header.is-after-active .workspace-tab-header-inner {
-  display: none;
+  background-color: transparent !important;
 }
 
 /**************************************/
