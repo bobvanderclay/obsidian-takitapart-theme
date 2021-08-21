@@ -5,11 +5,13 @@
 /***************************************/
 /*  App Container                      */
 /***************************************/
-body:not(.is-mobile) .app-container {
-  padding-top: calc(
-    var(--titlebar-size) - calc(24px + var(--workspace-leaf-gap))
-  );
+body:not(.is-mobile) {
+  padding-top: var(--titlebar-size) !important;
+
+  & .app-container {
+  }
 }
+
 .app-container {
   background-color: var(--surround-bg);
 }

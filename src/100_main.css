@@ -13,7 +13,8 @@ body.is-translucent {
   & .workspace-ribbon,
   & .workspace-split.mod-root,
   & .workspace-tabs,
-  & .status-bar {
+  & .status-bar,
+  & .titlebar {
     opacity: 1;
   }
 }

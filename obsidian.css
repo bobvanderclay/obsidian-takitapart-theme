@@ -199,7 +199,8 @@ body.is-translucent {
 body.is-translucent .workspace-ribbon,
   body.is-translucent .workspace-split.mod-root,
   body.is-translucent .workspace-tabs,
-  body.is-translucent .status-bar {
+  body.is-translucent .status-bar,
+  body.is-translucent .titlebar {
     opacity: 1;
   }
 /*************************************/
@@ -404,14 +405,48 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 .titlebar {
   background-color: var(--surround-bg) !important;
   height: var(--titlebar-size) !important;
-  padding: 0;
+  padding: 0 !important
 }
-.titlebar-button-container {
-  /* top: 0 !important; */
-}
-.titlebar-text {
-  color: rgba(255, 255, 255, 0.25) !important;
-}
+.titlebar .titlebar-inner {
+    color: var(--surround-normal)
+  }
+.titlebar .titlebar-inner .titlebar-left {
+    }
+.titlebar .titlebar-inner .titlebar-text {
+      cursor: default;
+      color: var(--ef_red);
+      font-size: 13px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      margin: 8px auto;
+      line-height: calc(var(--titlebar-size) - 16px);
+      height: calc(var(--titlebar-size) - 16px);
+      width: 40%;
+      inset: 0 30%;
+      letter-spacing: 0;
+      opacity: 1;
+    }
+.titlebar .titlebar-inner .titlebar-button-container {
+      /* height: var(--titlebar-size); */
+      top: 0px
+    }
+.titlebar .titlebar-inner .titlebar-button-container.mod-left {
+      }
+.titlebar .titlebar-inner .titlebar-button-container.mod-right {
+      }
+.titlebar .titlebar-inner .titlebar-button-container .titlebar-button {
+        margin: 8px 8px;
+        padding: 4px 8px;
+        cursor: default
+      }
+.titlebar .titlebar-inner .titlebar-button-container .titlebar-button:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+        }
+.titlebar .titlebar-inner .titlebar-button-container .titlebar-button.mod-back {
+        }
+.titlebar .titlebar-inner .titlebar-button-container .titlebar-button.mod-forward {
+        }
 .status-bar {
   color: var(--surround-normal);
   font-size: var(--font-size-status-bar);
@@ -434,21 +469,42 @@ body.is-translucent .status-bar {
 /*  workspace-leaves                  */
 /**************************************/
 .workspace-leaf .workspace-leaf-content {
+    border-radius: 0;
   }
+/* ----------------------------------------------- */
 /* Gaps between workspaces. */
+/* 
+Horizontal:
+Don't add gap on first
+https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107 */
+/* Sidebars */
+.workspace-split > .workspace-tabs .workspace-leaf {
+      margin-top: 0;
+      padding: 0 !important;
+    }
+.workspace-split > .workspace-tabs ~ .workspace-tabs .workspace-leaf {
+      margin-top: var(--workspace-leaf-gap);
+    }
+/* Content panes */
+.workspace-split > .workspace-leaf .view-header {
+      margin-top: 0;
+    }
+.workspace-split > .workspace-leaf ~ .workspace-leaf .view-header {
+      margin-top: var(--workspace-leaf-gap);
+    }
+/* ----------------------------------------------- */
+/* Right (vertical) gap */
 .mod-left-split {
-  padding: 0 var(--workspace-leaf-gap) 0 0;
+  padding-right: var(--workspace-leaf-gap);
 }
-.workspace-tabs .workspace-leaf {
-    margin-top: var(--workspace-leaf-gap);
-    padding: 0 !important;
-  }
 .workspace-leaf {
-  padding: 0 var(--workspace-leaf-gap) 0 0 !important;
+  padding-right: var(--workspace-leaf-gap) !important;
 }
+/* But not on right sidebar */
 .mod-right-split .workspace-leaf {
-  padding: 0;
+  padding-right: 0;
 }
+/* ----------------------------------------------- */
 /* Workspace leaf content is moved up behind the header, 
 so that panes may have styles per type. */
 .workspace-tabs .workspace-leaf .workspace-leaf-content {
@@ -461,15 +517,16 @@ so that panes may have styles per type. */
   background-color: var(--surround-bg);
 }
 .workspace-tab-header-container {
-  z-index: 10;
+  /* Move header over leaf content, so that per-type styling
+  to the content will show under header. */
+  z-index: 1;
   position: absolute;
   inset: 0;
   margin-top: var(--workspace-leaf-gap);
   padding: 0;
   height: var(--workspace-header-size) !important;
-  /* background-color: var(--background-primary) !important; */
   background-color: transparent !important;
-  border-bottom: 2px solid var(--text-faint) !important
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important
 }
 .workspace-tab-header-container:not(:hover) .workspace-tab-header:not(.is-active) {
     opacity: 0.1;
@@ -531,7 +588,6 @@ so that panes may have styles per type. */
 /*  view header bar                   */
 /**************************************/
 .view-header {
-  margin-top: 8px;
   height: var(--workspace-header-size) !important;
   background-color: var(--background-primary) !important
   /* border: none !important; */
@@ -595,11 +651,11 @@ so that panes may have styles per type. */
 /***************************************/
 /*  App Container                      */
 /***************************************/
-body:not(.is-mobile) .app-container {
-  padding-top: calc(
-    var(--titlebar-size) - calc(24px + var(--workspace-leaf-gap))
-  );
+body:not(.is-mobile) {
+  padding-top: var(--titlebar-size) !important
 }
+body:not(.is-mobile) .app-container {
+  }
 .app-container {
   background-color: var(--surround-bg);
 }

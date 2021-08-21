@@ -1,13 +1,53 @@
 .titlebar {
   background-color: var(--surround-bg) !important;
   height: var(--titlebar-size) !important;
-  padding: 0;
-}
+  padding: 0 !important;
 
-.titlebar-button-container {
-  /* top: 0 !important; */
-}
+  & .titlebar-inner {
+    color: var(--surround-normal);
 
-.titlebar-text {
-  color: rgba(255, 255, 255, 0.25) !important;
+    & .titlebar-left {
+    }
+
+    & .titlebar-text {
+      cursor: default;
+      color: var(--ef_red);
+      font-size: 13px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      margin: 8px auto;
+      line-height: calc(var(--titlebar-size) - 16px);
+      height: calc(var(--titlebar-size) - 16px);
+      width: 40%;
+      inset: 0 30%;
+      letter-spacing: 0;
+      opacity: 1;
+    }
+
+    & .titlebar-button-container {
+      /* height: var(--titlebar-size); */
+      top: 0px;
+
+      &.mod-left {
+      }
+      &.mod-right {
+      }
+
+      & .titlebar-button {
+        margin: 8px 8px;
+        padding: 4px 8px;
+        cursor: default;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+        }
+
+        &.mod-back {
+        }
+        &.mod-forward {
+        }
+      }
+    }
+  }
 }

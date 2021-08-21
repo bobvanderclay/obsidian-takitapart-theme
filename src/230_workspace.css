@@ -3,26 +3,65 @@
 /**************************************/
 .workspace-leaf {
   & .workspace-leaf-content {
+    border-radius: 0;
   }
 }
 
+/* ----------------------------------------------- */
 /* Gaps between workspaces. */
-.mod-left-split {
-  padding: 0 var(--workspace-leaf-gap) 0 0;
-}
-.workspace-tabs {
-  & .workspace-leaf {
-    margin-top: var(--workspace-leaf-gap);
-    padding: 0 !important;
+
+/* 
+Horizontal:
+Don't add gap on first
+https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107 */
+
+/* Sidebars */
+.workspace-split {
+  & > .workspace-tabs {
+    & .workspace-leaf {
+      margin-top: 0;
+      padding: 0 !important;
+    }
   }
+}
+.workspace-split {
+  & > .workspace-tabs ~ .workspace-tabs {
+    & .workspace-leaf {
+      margin-top: var(--workspace-leaf-gap);
+    }
+  }
+}
+
+/* Content panes */
+.workspace-split {
+  & > .workspace-leaf {
+    & .view-header {
+      margin-top: 0;
+    }
+  }
+}
+.workspace-split {
+  & > .workspace-leaf ~ .workspace-leaf {
+    & .view-header {
+      margin-top: var(--workspace-leaf-gap);
+    }
+  }
+}
+
+/* ----------------------------------------------- */
+/* Right (vertical) gap */
+.mod-left-split {
+  padding-right: var(--workspace-leaf-gap);
 }
 .workspace-leaf {
-  padding: 0 var(--workspace-leaf-gap) 0 0 !important;
+  padding-right: var(--workspace-leaf-gap) !important;
 }
+/* But not on right sidebar */
 .mod-right-split .workspace-leaf {
-  padding: 0;
+  padding-right: 0;
 }
 
+/* ----------------------------------------------- */
 /* Workspace leaf content is moved up behind the header, 
 so that panes may have styles per type. */
 .workspace-tabs {
@@ -40,15 +79,16 @@ so that panes may have styles per type. */
   background-color: var(--surround-bg);
 }
 .workspace-tab-header-container {
-  z-index: 10;
+  /* Move header over leaf content, so that per-type styling
+  to the content will show under header. */
+  z-index: 1;
   position: absolute;
   inset: 0;
   margin-top: var(--workspace-leaf-gap);
   padding: 0;
   height: var(--workspace-header-size) !important;
-  /* background-color: var(--background-primary) !important; */
   background-color: transparent !important;
-  border-bottom: 2px solid var(--text-faint) !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
 
   &:not(:hover) .workspace-tab-header:not(.is-active) {
     opacity: 0.1;
@@ -119,7 +159,6 @@ so that panes may have styles per type. */
 /*  view header bar                   */
 /**************************************/
 .view-header {
-  margin-top: 8px;
   height: var(--workspace-header-size) !important;
   background-color: var(--background-primary) !important;
   /* border: none !important; */
