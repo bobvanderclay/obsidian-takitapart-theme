@@ -1,0 +1,7 @@
+.modal.vantage-modal {
+  padding: 30px 20px 30px 48px;
+
+  & .modal-content {
+    padding-right: 48px;
+  }
+}

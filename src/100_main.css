@@ -241,7 +241,3 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 .theme-light .horizontal-main-container ::-webkit-scrollbar {
   display: none !important;
 }
-
-.collapse-icon {
-  color: var(--text-accent);
-}

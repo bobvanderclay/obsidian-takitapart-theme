@@ -1,5 +1,5 @@
 .workspace-leaf-content[data-type='starred'] {
-  background-color: var(--ef_bg_green) !important;
+  background-color: var(--background-starred) !important;
 
   &::after {
     content: 'Starred';

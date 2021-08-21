@@ -7,13 +7,12 @@
   }
 }
 
-/* ----------------------------------------------- */
-/* Gaps between workspaces. */
+/*  ----------------------------------------------- */
+/*  Gaps between workspaces.
 
-/* 
-Horizontal:
-Don't add gap on first
-https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107 */
+    Horizontal:
+    Don't add gap on first
+    https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107 */
 
 /* Sidebars */
 .workspace-split {
@@ -109,8 +108,6 @@ so that panes may have styles per type. */
   }
 
   & .workspace-tab-container-inner {
-    /* Center icons */
-    /* margin: 0 auto; */
     /* Move active icon left, others right */
     display: flex;
     flex-direction: row;
@@ -122,6 +119,13 @@ so that panes may have styles per type. */
     & .workspace-tab-header:not(.is-active) {
       order: 1;
       flex: 0 0 auto;
+    }
+
+    & .workspace-tab-header-inner-icon {
+      margin: auto 0;
+      & svg {
+        display: block;
+      }
     }
   }
 

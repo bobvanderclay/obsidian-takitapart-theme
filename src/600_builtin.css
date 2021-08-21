@@ -5,34 +5,41 @@
 @import '650_file-explorer.css';
 @import '660_sync.css';
 
-.workspace-leaf-content[data-type='outline'] {
-  /* background-color: var(--ef_bg_red) !important; */
-
-  &::after {
-    content: 'Outline';
-  }
-}
-
-.workspace-leaf-content[data-type='outgoing-link'] {
-  /* background-color: var(--ef_bg_red) !important; */
-
-  &::after {
-    content: 'Outgoing Links';
-  }
-}
-
 .workspace-leaf-content[data-type='backlink'] {
-  /* background-color: var(--ef_bg_red) !important; */
+  background-color: var(--background-backlink) !important;
+  font-size: var(--font-size-side-dock);
 
   &::after {
     content: 'Backlinks';
   }
 }
 
+.workspace-leaf-content[data-type='outgoing-link'] {
+  background-color: var(--background-outgoing-link) !important;
+  font-size: var(--font-size-side-dock);
+
+  &::after {
+    content: 'Outgoing Links';
+  }
+}
+
+.workspace-leaf-content[data-type='outline'] {
+  background-color: var(--background-outline) !important;
+
+  &::after {
+    content: 'Outline';
+  }
+}
+
 .workspace-leaf-content[data-type='tag'] {
-  background-color: var(--ef_bg_green) !important;
+  background-color: var(--background-tag) !important;
+  font-size: var(--font-size-side-dock);
 
   &::after {
     content: 'Tags';
+  }
+
+  & .tag-container {
+    /* padding: 0; */
   }
 }

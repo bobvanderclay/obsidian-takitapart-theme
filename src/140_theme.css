@@ -5,7 +5,7 @@
   --background-secondary: var(--ef_bg0);
   --background-secondary-alt: var(--ef_bg2);
   --background-accent: #fff;
-  --background-modifier-border: var(--base02);
+  --background-modifier-border: rgba(0, 0, 0, 0.1);
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -62,5 +62,14 @@
   --surround-accent: var(--gf_yellow);
   --surround-hover: var(--gf_red);
   --surround-muted: var(--ef_blue);
+
+  --background-backlink: var(--background-primary);
+  --background-calendar: var(--blue);
+  --background-file-explorer: var(--ef_bg_red);
+  --background-outgoing-link: var(--background-primary);
+  --background-outline: var(--background-primary);
+  --background-search: var(--ef_bg_red);
+  --background-starred: var(--ef_grey0);
+  --background-tag: var(--ef_bg_green);
 }
 /* better use rgba color for all color var ended with `bg`*/

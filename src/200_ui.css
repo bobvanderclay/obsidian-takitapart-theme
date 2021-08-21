@@ -51,6 +51,9 @@ body:not(.is-mobile) {
   border-radius: 0;
 }
 
+/***************************************/
+/*            Nav File                 */
+/***************************************/
 .nav-file-title,
 .nav-folder-title {
   border-bottom-left-radius: 0 !important;
@@ -60,24 +63,43 @@ body:not(.is-mobile) {
 }
 
 .nav-file.is-active > .nav-file-title {
-  background-color: var(--hover-bg) !important;
-}
-/* .nav-file-title:hover, .nav-folder-title:hover {
-  background-color: var(--hover-bg) !important;
-} */
-
-/*backlink pane*/
-.workspace-leaf-content[data-type='backlink'] .view-content {
-  background-color: var(--background-secondary);
+  background-color: var(--background-modifier-hover) !important;
 }
 
-.workspace-leaf-content[data-type='tag'] .tag-pane-tag-count,
-.workspace-leaf-content[data-type='tag'] .tag-pane-tag-text {
-  font-size: var(--font-size-side-dock);
+.nav-file-title.is-active,
+.nav-folder-title.is-active,
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover {
+  background-color: var(--background-modifier-hover) !important;
 }
 
-.workspace-leaf-content[data-type='backlink'] .search-result-file-matches {
-  font-size: var(--font-size-side-dock);
+/***************************************/
+/*            Tree Item                */
+/***************************************/
+.tree-item {
+  & .tree-item-self {
+    &.is-clickable {
+      &:hover {
+        background-color: var(--background-modifier-hover);
+      }
+    }
+
+    & .tree-item-icon {
+      &.collapse-icon {
+      }
+    }
+  }
+}
+
+/***************************************/
+/*            Collapse Icon            */
+/***************************************/
+.collapse-icon {
+  /* color: var(--text-accent); */
+
+  & > svg {
+    -webkit-mask-size: auto 120% !important;
+  }
 }
 
 /***************************************/

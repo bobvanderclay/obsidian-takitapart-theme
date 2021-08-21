@@ -1,5 +1,5 @@
 .workspace-leaf-content[data-type='file-explorer'] {
-  background-color: var(--ef_bg_red) !important;
+  background-color: var(--background-file-explorer) !important;
 
   &::after {
     content: 'File Explorer';

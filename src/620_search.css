@@ -1,5 +1,5 @@
 .workspace-leaf-content[data-type='search'] {
-  background-color: var(--ef_bg_red) !important;
+  background-color: var(--background-search) !important;
 
   &::after {
     content: 'Search';
