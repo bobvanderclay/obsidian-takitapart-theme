@@ -579,19 +579,16 @@ so that panes may have styles per type. */
     cursor: pointer
   }
 .workspace-tab-header-container .workspace-tab-header:hover {
-      color: var(--surround-hover);
+      color: var(--surround-hover) !important;
     }
 .workspace-tab-header-container .workspace-tab-header.is-active {
       color: var(--text-muted) !important;
       margin: 4px;
       border-radius: 5px;
-      cursor: grab
+      cursor: grab;
     }
-.workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner {
-        padding: calc((var(--workspace-header-size) - 40px)) 12px !important;
-      }
 .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner {
-      padding: calc((var(--workspace-header-size) - 36px)) 12px !important;
+      padding: calc((var(--workspace-header-size) - 36px)) 8px !important;
     }
 /* Remove tab header bookends */
 .workspace-tab-container-before,

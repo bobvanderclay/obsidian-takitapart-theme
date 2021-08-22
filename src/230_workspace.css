@@ -135,7 +135,7 @@ so that panes may have styles per type. */
     cursor: pointer;
 
     &:hover {
-      color: var(--surround-hover);
+      color: var(--surround-hover) !important;
     }
 
     &.is-active {
@@ -143,14 +143,10 @@ so that panes may have styles per type. */
       margin: 4px;
       border-radius: 5px;
       cursor: grab;
-
-      & .workspace-tab-header-inner {
-        padding: calc((var(--workspace-header-size) - 40px)) 12px !important;
-      }
     }
 
     & .workspace-tab-header-inner {
-      padding: calc((var(--workspace-header-size) - 36px)) 12px !important;
+      padding: calc((var(--workspace-header-size) - 36px)) 8px !important;
     }
   }
 }
