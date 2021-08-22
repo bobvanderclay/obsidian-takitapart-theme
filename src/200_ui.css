@@ -41,17 +41,6 @@ body:not(.is-mobile) {
 }
 
 /***************************************/
-/*            Side panel               */
-/***************************************/
-/* Rounded corners. */
-.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
-  border-radius: 0;
-}
-.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
-  border-radius: 0;
-}
-
-/***************************************/
 /*            Nav File                 */
 /***************************************/
 .nav-file-title,

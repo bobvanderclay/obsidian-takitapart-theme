@@ -1,6 +1,7 @@
 .theme-light,
 .theme-dark {
-  --background-primary: var(--ef_bg0);
+  /* Stock Variables */
+  --background-primary: var(--ef_bg1);
   --background-primary-alt: var(--ef_bg0);
   --background-secondary: var(--ef_bg0);
   --background-secondary-alt: var(--ef_bg2);
@@ -40,7 +41,7 @@
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.2);
   --highlight-mix-blend-mode: darken;
 
-  /* Custom */
+  /* Custom Variables */
   --text-title-h1: var(--ef_yellow);
   --text-title-h2: var(--ef_yellow);
   --text-title-h3: var(--ef_yellow);
@@ -72,4 +73,3 @@
   --background-starred: var(--ef_bg_yellow);
   --background-tag: var(--ef_bg_green);
 }
-/* better use rgba color for all color var ended with `bg`*/

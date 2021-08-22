@@ -1,10 +1,17 @@
 /**************************************/
 /*  workspace-leaves                  */
 /**************************************/
+/* Rounded corners */
 .workspace-leaf {
   & .workspace-leaf-content {
-    border-radius: 0;
+    border-radius: 0 !important;
   }
+}
+.workspace-split.mod-left-split .workspace-tabs .workspace-leaf {
+  border-radius: 0 !important;
+}
+.workspace-split.mod-right-split .workspace-tabs .workspace-leaf {
+  border-radius: 0 !important;
 }
 
 /*  ----------------------------------------------- */
