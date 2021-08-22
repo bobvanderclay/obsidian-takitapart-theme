@@ -64,7 +64,7 @@
   --surround-muted: var(--ef_blue);
 
   --background-backlink: var(--background-primary);
-  --background-calendar: var(--blue);
+  --background-calendar: var(--ef_bg_blue);
   --background-file-explorer: var(--ef_bg_red);
   --background-outgoing-link: var(--background-primary);
   --background-outline: var(--background-primary);

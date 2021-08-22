@@ -223,27 +223,25 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 /***************************************/
 /*  Suggestion                         */
 /***************************************/
-.suggestion-container {
-  & .suggestion {
-    & .suggestion-item {
-      font-size: 0.9rem;
+/* .suggestion-container {
+  & .suggestion { */
+.suggestion-item {
+  font-size: 0.9rem;
 
-      &.mod-group {
-        font-size: 0.8rem;
-      }
-
-      &.is-selected {
-        /* background-color: var(--background-modifier-form-field); */
-      }
-
-      &:not(.mod-group):hover {
-        background-color: var(--background-modifier-form-field);
-      }
-    }
+  &.mod-group {
+    font-size: 0.8rem;
   }
-  & .prompt-instructions {
-    & .prompt-instruction {
-    }
+
+  &.is-selected {
+    background-color: var(--background-modifier-hover) !important;
+  }
+
+  &:not(.mod-group):hover {
+    /* background-color: var(--background-modifier-hover) !important; */
+  }
+}
+.prompt-instructions {
+  & .prompt-instruction {
   }
 }
 
