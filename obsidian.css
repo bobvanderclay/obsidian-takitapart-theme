@@ -156,26 +156,26 @@ settings:
   --text-selection: rgba(89, 75, 95, 0.99);
 
   --text-on-accent: var(--text-normal);
-  --interactive-normal: var(--gf_yellow);
-  --interactive-hover: var(--gf_yellow);
-  --interactive-accent: var(--gf_yellow);
+  --interactive-normal: var(--ef_yellow);
+  --interactive-hover: var(--ef_yellow);
+  --interactive-accent: var(--ef_yellow);
   --interactive-accent-rgb: 123, 108, 217;
   --interactive-accent-hover: var(--teal);
-  --interactive-success: var(--gf_green);
+  --interactive-success: var(--ef_green);
   --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.4);
   --scrollbar-bg: rgba(0, 0, 0, 0.05);
   --scrollbar-thumb-bg: rgba(0, 0, 0, 0.2);
   --highlight-mix-blend-mode: darken;
 
   /* Custom */
-  --text-title-h1: var(--gf_yellow);
-  --text-title-h2: var(--gf_yellow);
-  --text-title-h3: var(--gf_yellow);
-  --text-title-h4: var(--gf_yellow);
-  --text-title-h5: var(--gf_yellow);
-  --text-title-h6: var(--gf_yellow);
-  --inline-code: var(--gf_yellow);
-  --code-block: var(--gf_yellow);
+  --text-title-h1: var(--ef_yellow);
+  --text-title-h2: var(--ef_yellow);
+  --text-title-h3: var(--ef_yellow);
+  --text-title-h4: var(--ef_yellow);
+  --text-title-h5: var(--ef_yellow);
+  --text-title-h6: var(--ef_yellow);
+  --inline-code: var(--ef_yellow);
+  --code-block: var(--ef_yellow);
   --pre-code-bg: rgba(0, 0, 0, 0.2);
   --blockquote-border: var(--text-accent);
   --vim-cursor: #d65d0e;
@@ -186,8 +186,8 @@ settings:
 
   --surround-bg: transparent;
   --surround-normal: var(--ef_bg0);
-  --surround-accent: var(--gf_yellow);
-  --surround-hover: var(--gf_red);
+  --surround-accent: var(--ef_yellow);
+  --surround-hover: var(--ef_red);
   --surround-muted: var(--ef_blue);
 
   --background-backlink: var(--background-primary);
@@ -196,7 +196,7 @@ settings:
   --background-outgoing-link: var(--background-primary);
   --background-outline: var(--background-primary);
   --background-search: var(--ef_bg_red);
-  --background-starred: var(--ef_grey0);
+  --background-starred: var(--ef_bg_yellow);
   --background-tag: var(--ef_bg_green);
 }
 /* better use rgba color for all color var ended with `bg`*/
