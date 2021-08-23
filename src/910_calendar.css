@@ -1,4 +1,5 @@
 .workspace-leaf-content[data-type='calendar'] {
+  --interactive-accent: var(--ef_red);
   background-color: var(--background-calendar) !important;
 
   &::after {

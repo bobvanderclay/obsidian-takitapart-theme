@@ -34,6 +34,7 @@
 .workspace-leaf-content[data-type='tag'] {
   background-color: var(--background-tag) !important;
   font-size: var(--font-size-side-dock);
+  --interactive-accent: var(--ef_blue);
 
   &::after {
     content: 'Tags';

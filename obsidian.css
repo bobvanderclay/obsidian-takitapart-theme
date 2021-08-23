@@ -1419,7 +1419,8 @@ thead {
   }
 .workspace-leaf-content[data-type='tag'] {
   background-color: var(--background-tag) !important;
-  font-size: var(--font-size-side-dock)
+  font-size: var(--font-size-side-dock);
+  --interactive-accent: var(--ef_blue)
 }
 .workspace-leaf-content[data-type='tag']::after {
     content: 'Tags';
@@ -2149,6 +2150,7 @@ body:not(.no-svg-replace) svg.templater-icon {
     -webkit-mask-image: url('data:image/svg+xml;utf8,');
   }
 .workspace-leaf-content[data-type='calendar'] {
+  --interactive-accent: var(--ef_red);
   background-color: var(--background-calendar) !important
 }
 .workspace-leaf-content[data-type='calendar']::after {
