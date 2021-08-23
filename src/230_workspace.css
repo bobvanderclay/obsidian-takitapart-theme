@@ -49,8 +49,22 @@
     }
   }
 }
-.workspace-split {
+.workspace-split:not(.mod-root) > .workspace-split.mod-horizontal {
+  & > .workspace-leaf {
+    & .view-header {
+      margin-top: var(--workspace-leaf-gap);
+    }
+  }
+}
+.workspace-split.mod-horizontal {
   & > .workspace-leaf ~ .workspace-leaf {
+    & .view-header {
+      margin-top: var(--workspace-leaf-gap);
+    }
+  }
+}
+.workspace-split.mod-vertical:not(.mod-root) {
+  & > .workspace-leaf {
     & .view-header {
       margin-top: var(--workspace-leaf-gap);
     }

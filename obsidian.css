@@ -463,7 +463,13 @@ body.is-translucent .status-bar {
 .workspace-split > .workspace-leaf .view-header {
       margin-top: 0;
     }
-.workspace-split > .workspace-leaf ~ .workspace-leaf .view-header {
+.workspace-split:not(.mod-root) > .workspace-split.mod-horizontal > .workspace-leaf .view-header {
+      margin-top: var(--workspace-leaf-gap);
+    }
+.workspace-split.mod-horizontal > .workspace-leaf ~ .workspace-leaf .view-header {
+      margin-top: var(--workspace-leaf-gap);
+    }
+.workspace-split.mod-vertical:not(.mod-root) > .workspace-leaf .view-header {
       margin-top: var(--workspace-leaf-gap);
     }
 /* ----------------------------------------------- */
