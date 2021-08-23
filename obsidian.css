@@ -489,7 +489,7 @@ so that panes may have styles per type. */
 .workspace-tabs .workspace-leaf .workspace-leaf-content::after {
         position: absolute;
         top: 0;
-        left: 48px;
+        left: 42px;
         line-height: var(--surround-size) !important;
         color: var(--text-muted);
         font-size: 16px;
@@ -583,7 +583,8 @@ so that panes may have styles per type. */
   }
 .view-header .view-header-title-container {
     height: var(--surround-size) !important;
-    line-height: var(--surround-size) !important
+    line-height: var(--surround-size) !important;
+    padding: 0 !important
   }
 .view-header .view-header-title-container:after {
       /* background: linear-gradient(to right, transparent, var(--red)) !important; */
