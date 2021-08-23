@@ -507,7 +507,7 @@ so that panes may have styles per type. */
   z-index: 1;
   position: absolute;
   inset: 0;
-  padding: 0;
+  padding: 0 12px 0 0;
   height: var(--workspace-header-size) !important;
   background-color: transparent !important;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important
