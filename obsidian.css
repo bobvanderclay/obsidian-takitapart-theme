@@ -471,7 +471,9 @@ body.is-translucent .status-bar {
   }
 } */
 .workspace-split.mod-horizontal > .workspace-split ~ .workspace-leaf,
-  .workspace-split.mod-horizontal > .workspace-leaf ~ .workspace-leaf {
+  .workspace-split.mod-horizontal > .workspace-leaf ~ .workspace-leaf,
+  .workspace-split.mod-horizontal > .workspace-split ~ .workspace-split,
+  .workspace-split.mod-horizontal > .workspace-leaf ~ .workspace-split {
     margin-top: var(--workspace-leaf-gap);
   }
 /* .workspace-split.mod-horizontal {

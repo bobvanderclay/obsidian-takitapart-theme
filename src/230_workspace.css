@@ -58,7 +58,9 @@
 } */
 .workspace-split.mod-horizontal {
   & > .workspace-split ~ .workspace-leaf,
-  & > .workspace-leaf ~ .workspace-leaf {
+  & > .workspace-leaf ~ .workspace-leaf,
+  & > .workspace-split ~ .workspace-split,
+  & > .workspace-leaf ~ .workspace-split {
     margin-top: var(--workspace-leaf-gap);
   }
 }
