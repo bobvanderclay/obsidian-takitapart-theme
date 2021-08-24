@@ -29,92 +29,15 @@ code {
 }
 
 /* remove the shadow that typically affect light mode */
-.theme-dark code[class*='language-'],
-.theme-dark pre[class*='language-'],
-.theme-light code[class*='language-'],
-.theme-light pre[class*='language-'] {
+code[class*='language-'],
+pre[class*='language-'] {
   text-shadow: none !important;
   color: var(--text-faint) !important;
 }
 
-.theme-light code[class*='language-'],
-.theme-light pre[class*='language-'] {
+code[class*='language-'],
+pre[class*='language-'] {
   background-color: var(--background-primary-alt);
-}
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string {
-  background-color: transparent;
-}
-
-.theme-dark .token.function,
-.theme-dark .token.class-name,
-.theme-light .token.function,
-.theme-light .token.class-name {
-  color: #dd4a68;
-}
-
-.theme-light .token.comment,
-.theme-light .token.prolog,
-.theme-light .token.doctype,
-.theme-light .token.cdata {
-  color: slategray;
-}
-.theme-light .token.punctuation {
-  color: #f8f8f2;
-}
-.theme-light .token.namespace {
-  opacity: 0.7;
-}
-.theme-light .token.property,
-.theme-light .token.tag,
-.theme-light .token.constant,
-.theme-light .token.symbol,
-.theme-light .token.deleted {
-  color: #f92672;
-}
-.theme-light .token.boolean,
-.theme-light .token.number {
-  color: #ae81ff;
-}
-.theme-light .token.selector,
-.theme-light .token.attr-name,
-.theme-light .token.string,
-.theme-light .token.char,
-.theme-light .token.builtin,
-.theme-light .token.inserted {
-  color: #a6e22e;
-}
-.theme-light .token.operator,
-.theme-light .token.entity,
-.theme-light .token.url,
-.theme-light .language-css .token.string,
-.theme-light .style .token.string,
-.theme-light .token.variable {
-  color: #f8f8f2;
-}
-.theme-light .token.atrule,
-.theme-light .token.attr-value {
-  color: #e6db74;
-}
-.theme-light .token.keyword {
-  color: #66d9ef;
-}
-.theme-light .token.regex,
-.theme-light .token.important {
-  color: #fd971f;
-}
-.theme-light .token.important,
-.theme-light .token.bold {
-  font-weight: bold;
-}
-.theme-light .token.italic {
-  font-style: italic;
-}
-.theme-light .token.entity {
-  cursor: help;
 }
 
 /***************************************/
@@ -161,3 +84,188 @@ code {
 /* .CodeMirror-activeline .CodeMirror-linebackground {
   background-color: var(--text-selection) !important;
 } */
+
+/***************************************/
+/*       Syntax Highlighting           */
+/***************************************/
+/*
+  Taken from syntax highlighter plugin: 
+
+  Name:       yoncé
+  Author:     Thomas MacLean (http://github.com/thomasmaclean)
+
+  Original yoncé color scheme by Mina Markham (https://github.com/minamarkham)
+
+  */
+/**/
+.cm-s-obsidian pre.HyperMD-codeblock span.cm-formatting-code-block {
+  color: var(--text-muted);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock .cm-keyword {
+  font-weight: normal;
+}
+
+.theme-dark .cm-s-obsidian {
+}
+
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock {
+  color: #d4d4d4;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-keyword,
+.theme-dark .cm-s-obsidian .cm-math.cm-keyword,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-keyword {
+  color: var(--ef_blue) !important;
+  font-weight: normal;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-atom,
+.theme-dark .cm-s-obsidian .cm-math.cm-atom,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-atom {
+  color: var(--ef_orange) !important;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-number,
+.theme-dark .cm-s-obsidian .cm-math.cm-number,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-number {
+  color: #a06fca;
+}
+.theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-type,
+.theme-dark .cm-s-obsidian span.cm-math.cm-type,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-type {
+  color: var(--ef_purple) !important;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-def,
+.theme-dark .cm-s-obsidian .cm-math.cm-def,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-def {
+  color: var(--ef_green) !important;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-property,
+.theme-dark .cm-s-obsidian .cm-math.cm-property,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-property {
+  color: #d4d4d4;
+}
+.theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable,
+.theme-dark .cm-s-obsidian span.cm-math.cm-variable,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable {
+  color: #d4d4d4;
+}
+.theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable-2,
+.theme-dark .cm-s-obsidian span.cm-math.cm-variable-2,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-2 {
+  color: #da7dae;
+}
+.theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable-3,
+.theme-dark .cm-s-obsidian span.cm-math.cm-variable-3,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-3 {
+  color: #a06fca;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-type.cm-def,
+.theme-dark .cm-s-obsidian .cm-math.cm-type.cm-def,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-type.cm-def {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-property.cm-def,
+.theme-dark .cm-s-obsidian .cm-math.cm-property.cm-def,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-property.cm-def {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-callee,
+.theme-dark .cm-s-obsidian .cm-math.cm-callee,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-callee {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-operator,
+.theme-dark .cm-s-obsidian .cm-math.cm-operator,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-operator {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier,
+.theme-dark .cm-s-obsidian .cm-math.cm-qualifier,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-qualifier {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-tag,
+.theme-dark .cm-s-obsidian .cm-math.cm-tag,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-tag.cm-bracket,
+.theme-dark .cm-s-obsidian .cm-math.cm-tag.cm-bracket,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-tag.cm-bracket {
+  color: #d4d4d4;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-attribute,
+.theme-dark .cm-s-obsidian .cm-math.cm-attribute,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-attribute {
+  color: #a06fca;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-comment,
+.theme-dark .cm-s-obsidian .cm-math.cm-comment,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-comment {
+  color: #696d70;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-comment.cm-tag,
+.theme-dark .cm-s-obsidian .cm-math.cm-comment.cm-tag,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-comment.cm-tag {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-comment.cm-attribute,
+.theme-dark .cm-s-obsidian .cm-math.cm-comment.cm-attribute,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-comment.cm-attribute {
+  color: #d4d4d4;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-string,
+.theme-dark .cm-s-obsidian .cm-math.cm-string,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-string {
+  color: var(--ef_yellow) !important;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-string-2,
+.theme-dark .cm-s-obsidian .cm-math.cm-string-2,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-string-2 {
+  color: var(--ef_orange) !important;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-meta,
+.theme-dark .cm-s-obsidian .cm-math.cm-meta,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-meta {
+  color: #d4d4d4;
+  background: inherit;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-builtin,
+.theme-dark .cm-s-obsidian .cm-math.cm-builtin,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-builtin {
+  color: #fc4384;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-header,
+.theme-dark .cm-s-obsidian .cm-math.cm-header,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-header {
+  color: #da7dae;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-hr,
+.theme-dark .cm-s-obsidian .cm-math.cm-hr,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-hr {
+  color: #98e342;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-link,
+.theme-dark .cm-s-obsidian .cm-math.cm-link,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-link {
+  color: #696d70;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-error,
+.theme-dark .cm-s-obsidian .cm-math.cm-error,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-error {
+  border-bottom: 1px solid #c42412;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.CodeMirror-activeline-background,
+.theme-dark .cm-s-obsidian .cm-math.CodeMirror-activeline-background,
+.theme-dark
+  .cm-s-obsidian
+  pre.HyperMD-codeblock
+  .CodeMirror-activeline-background {
+  background: #272727;
+}
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.CodeMirror-matchingbracket,
+.theme-dark .cm-s-obsidian .cm-math.CodeMirror-matchingbracket,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .CodeMirror-matchingbracket {
+  outline: 1px solid grey;
+  color: #d4d4d4 !important;
+}
