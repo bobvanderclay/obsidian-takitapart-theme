@@ -116,7 +116,7 @@ pre[class*='language-'] {
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-keyword,
 .theme-dark .cm-s-obsidian .cm-math.cm-keyword,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-keyword {
-  color: var(--ef_blue) !important;
+  color: var(--ef_red) !important;
   font-weight: normal;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-atom,
@@ -127,42 +127,42 @@ pre[class*='language-'] {
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-number,
 .theme-dark .cm-s-obsidian .cm-math.cm-number,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-number {
-  color: #a06fca;
+  color: var(--ef_purple) !important;
 }
 .theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-type,
 .theme-dark .cm-s-obsidian span.cm-math.cm-type,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-type {
-  color: var(--ef_purple) !important;
+  color: var(--ef_blue) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-def,
 .theme-dark .cm-s-obsidian .cm-math.cm-def,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-def {
-  color: var(--ef_green) !important;
+  color: var(--ef_purple) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-property,
 .theme-dark .cm-s-obsidian .cm-math.cm-property,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-property {
-  color: #d4d4d4;
+  color: var(--ef_fg) !important;
 }
 .theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable,
 .theme-dark .cm-s-obsidian span.cm-math.cm-variable,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable {
-  color: #d4d4d4;
+  color: var(--ef_green) !important;
 }
 .theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable-2,
 .theme-dark .cm-s-obsidian span.cm-math.cm-variable-2,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-2 {
-  color: #da7dae;
+  color: var(--ef_fg) !important;
 }
 .theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable-3,
 .theme-dark .cm-s-obsidian span.cm-math.cm-variable-3,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-3 {
-  color: #a06fca;
+  color: var(--ef_fg) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-type.cm-def,
 .theme-dark .cm-s-obsidian .cm-math.cm-type.cm-def,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-type.cm-def {
-  color: #fc4384;
+  color: var(--ef_red) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-property.cm-def,
 .theme-dark .cm-s-obsidian .cm-math.cm-property.cm-def,
@@ -177,7 +177,7 @@ pre[class*='language-'] {
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-operator,
 .theme-dark .cm-s-obsidian .cm-math.cm-operator,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-operator {
-  color: #fc4384;
+  color: var(--ef_orange) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-qualifier,
 .theme-dark .cm-s-obsidian .cm-math.cm-qualifier,
@@ -187,12 +187,12 @@ pre[class*='language-'] {
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-tag,
 .theme-dark .cm-s-obsidian .cm-math.cm-tag,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-tag {
-  color: #fc4384;
+  color: var(--ef_orange) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-tag.cm-bracket,
 .theme-dark .cm-s-obsidian .cm-math.cm-tag.cm-bracket,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-tag.cm-bracket {
-  color: #d4d4d4;
+  color: var(--ef_fg) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-attribute,
 .theme-dark .cm-s-obsidian .cm-math.cm-attribute,
@@ -212,7 +212,7 @@ pre[class*='language-'] {
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-comment.cm-attribute,
 .theme-dark .cm-s-obsidian .cm-math.cm-comment.cm-attribute,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-comment.cm-attribute {
-  color: #d4d4d4;
+  color: var(--ef_yellow) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-string,
 .theme-dark .cm-s-obsidian .cm-math.cm-string,
@@ -222,7 +222,7 @@ pre[class*='language-'] {
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-string-2,
 .theme-dark .cm-s-obsidian .cm-math.cm-string-2,
 .theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-string-2 {
-  color: var(--ef_orange) !important;
+  color: var(--ef_yellow) !important;
 }
 .theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-meta,
 .theme-dark .cm-s-obsidian .cm-math.cm-meta,

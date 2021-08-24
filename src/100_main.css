@@ -68,36 +68,6 @@ a.tag:hover {
   border-radius: 15px;
 }
 
-/*********************************/
-/*             link              */
-/*********************************/
-
-/* link */
-a,
-.internal-link,
-.cm-hmd-internal-link,
-.cm-link,
-.cm-formatting-link,
-.cm-url {
-  text-decoration: none !important;
-}
-
-/* the url string in editor */
-.cm-s-obsidian span.cm-string {
-  color: var(--text-accent-hover) !important;
-}
-
-/* make external links italics to differentiate */
-a:not(.internal-link) {
-  font-style: italic;
-}
-
-/*footnote*/
-.cm-s-obsidian pre.HyperMD-footnote span.cm-hmd-footnote,
-.cm-s-obsidian span.cm-footref {
-  color: var(--text-accent) !important;
-}
-
 /***************************************/
 /*                Cursor               */
 /***************************************/
