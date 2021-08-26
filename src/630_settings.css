@@ -33,7 +33,7 @@
         }
       }
       & .vertical-tab-content-container {
-        background: var(--background-primary);
+        background-color: var(--background-secondary);
         padding: 48px 20px 24px 0;
 
         & .vertical-tab-content {

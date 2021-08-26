@@ -31,10 +31,10 @@
 
   --text-on-accent: var(--text-normal);
   --interactive-normal: var(--ef_yellow);
-  --interactive-hover: var(--ef_yellow);
+  --interactive-hover: var(--ef_orange);
   --interactive-accent: var(--ef_yellow);
   --interactive-accent-rgb: 123, 108, 217;
-  --interactive-accent-hover: var(--teal);
+  --interactive-accent-hover: var(--ef_orange);
   --interactive-success: var(--ef_green);
   --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.4);
   --scrollbar-bg: rgba(0, 0, 0, 0.05);

@@ -276,6 +276,13 @@ textarea {
 input[type='checkbox'] {
   filter: hue-rotate(-25deg) saturate(50%);
 }
+button {
+  color: var(--ef_bg1) !important;
+
+  &:hover {
+    /* background-color: var(--ef_bg1) !important; */
+  }
+}
 
 /***************************************/
 /*  Nav buttons header                 */

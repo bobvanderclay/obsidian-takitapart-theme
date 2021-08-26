@@ -114,10 +114,10 @@ settings:
 
   --text-on-accent: var(--text-normal);
   --interactive-normal: var(--ef_yellow);
-  --interactive-hover: var(--ef_yellow);
+  --interactive-hover: var(--ef_orange);
   --interactive-accent: var(--ef_yellow);
   --interactive-accent-rgb: 123, 108, 217;
-  --interactive-accent-hover: var(--teal);
+  --interactive-accent-hover: var(--ef_orange);
   --interactive-success: var(--ef_green);
   --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.4);
   --scrollbar-bg: rgba(0, 0, 0, 0.05);
@@ -826,6 +826,12 @@ textarea {
 input[type='checkbox'] {
   filter: hue-rotate(-25deg) saturate(50%);
 }
+button {
+  color: var(--ef_bg1) !important
+}
+button:hover {
+    /* background-color: var(--ef_bg1) !important; */
+  }
 /***************************************/
 /*  Nav buttons header                 */
 /***************************************/
@@ -1457,7 +1463,7 @@ thead {
                 color: var(--text-normal);
               }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container {
-        background: var(--background-primary);
+        background-color: var(--background-secondary);
         padding: 48px 20px 24px 0
       }
 .modal.mod-settings .modal-content .vertical-tabs-container .vertical-tab-content-container .vertical-tab-content .setting-item.setting-item-heading .setting-item-name {
