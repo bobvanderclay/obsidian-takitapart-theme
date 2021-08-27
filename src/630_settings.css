@@ -1,3 +1,7 @@
+.modal.mod-settings button:not(.mod-cta):hover {
+  background-color: var(--interactive-accent-hover);
+}
+
 .modal.mod-settings {
   background: var(--surround-bg);
 

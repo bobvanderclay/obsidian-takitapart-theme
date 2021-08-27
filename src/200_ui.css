@@ -274,7 +274,11 @@ textarea {
   font-size: 14px;
 }
 input[type='checkbox'] {
-  filter: hue-rotate(-25deg) saturate(50%);
+  border: none !important;
+  filter: opacity(0.5) !important;
+  &:checked {
+    filter: hue-rotate(-25deg) saturate(0.5) !important;
+  }
 }
 button {
   color: var(--ef_bg1) !important;

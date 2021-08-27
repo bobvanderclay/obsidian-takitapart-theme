@@ -173,9 +173,20 @@ body.is-translucent .workspace-ribbon,
 /*************************************/
 /*                tags               */
 /*************************************/
-/* Tag hover in preview */
-a.tag:hover {
-  color: var(--text-accent) !important;
+a.tag {
+  font-family: var(--font-family-editor) !important;
+  background-color: var(--text-accent-hover);
+  border: none;
+  border-radius: 12px;
+  color: white !important;
+  font-size: var(--font-size-normal) !important;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  padding: 0px 8px 0px 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+  font-style: normal !important;
 }
 /* Tag Color in editor and preview*/
 /* .cm-hashtag {} */
@@ -192,14 +203,14 @@ a.tag:hover {
   cursor: pointer;
 }
 .cm-hashtag-begin {
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  padding: 1px 1px 1px 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 0px 1px 0px 8px;
 }
 .cm-hashtag-end {
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
-  padding: 1px 8px 1px 1px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 0px 8px 0px 1px;
 }
 /* to customize tags */
 .tag[href='#obsidian'] {
@@ -265,12 +276,6 @@ a.tag:hover {
 }
 .markdown-embed-link:hover {
   color: var(--text-accent) !important;
-}
-/***************************************/
-/*            settings                 */
-/***************************************/
-.modal.mod-settings button:not(.mod-cta):hover {
-  background-color: var(--interactive-accent-hover);
 }
 /***************************************/
 /*           width of content          */
@@ -824,8 +829,12 @@ textarea {
   font-size: 14px;
 }
 input[type='checkbox'] {
-  filter: hue-rotate(-25deg) saturate(50%);
+  border: none !important;
+  filter: opacity(0.5) !important
 }
+input[type='checkbox']:checked {
+    filter: hue-rotate(-25deg) saturate(0.5) !important;
+  }
 button {
   color: var(--ef_bg1) !important
 }
@@ -1119,9 +1128,6 @@ pre[class*='language-'] {
 .mod-single-child .markdown-preview-view {
   font-family: var(--font-family-editor);
   font-size: var(--font-size-normal);
-  padding-top: 0px;
-  padding-left: 2% !important;
-  padding-right: 1% !important;
 }
 /* bold in preview and editor */
 strong,
@@ -1341,31 +1347,6 @@ thead {
   font-weight: normal;
 }
 /***************************************/
-/*               Checkbox              */
-/***************************************/
-.markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: '✓';
-  position: absolute;
-  color: var(--text-accent);
-  font-size: 1em;
-  line-height: 1.25em;
-  width: 1.2em;
-  text-align: center;
-  text-shadow: 0 0 0.1em var(--text-accent);
-}
-.markdown-preview-view .task-list-item-checkbox {
-  -webkit-appearance: none;
-  top: 0.2em !important;
-  right: 4px;
-  box-sizing: border-box;
-  border: 1px solid var(--text-muted);
-  position: relative;
-  width: 1.25em;
-  height: 1.25em;
-  margin: 0;
-  box-shadow: 0 0 0.1em var(--text-muted);
-}
-/***************************************/
 /*           html in editor            */
 /***************************************/
 /* html tags in editor */
@@ -1380,6 +1361,42 @@ thead {
 .cm-s-obsidian span.cm-comment {
   color: var(--text-faint) !important;
 }
+/***************************************/
+/*           PREVIEW                   */
+/***************************************/
+.markdown-preview-view {
+  padding: 20px 30px 20px 40px;
+  line-height: 1.7
+}
+.markdown-preview-view.is-readable-line-width {
+  }
+.markdown-preview-view.allow-fold-headings {
+  }
+.markdown-preview-view.allow-fold-lists {
+  }
+.markdown-preview-view .markdown-preview-sizer {
+  }
+.markdown-preview-view .markdown-preview-pusher {
+  }
+.markdown-preview-view ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 16px
+  }
+.markdown-preview-view ul.contains-task-list {
+    }
+.markdown-preview-view ul li {
+      list-style-position: initial;
+      list-style-image: initial;
+      list-style-type: disc;
+      text-indent: 0
+    }
+.markdown-preview-view ul li.task-list-item .task-list-item-checkbox {
+        }
 /***************************************/
 /*             graph view              */
 /***************************************/
@@ -1435,6 +1452,9 @@ thead {
 .search-result-container .tree-item.search-result .search-result-file-matches .search-result-file-match:hover, .search-result-container .tree-item.search-result .search-empty-state .search-result-file-match:hover {
           background-color: var(--background-modifier-form-field);
         }
+.modal.mod-settings button:not(.mod-cta):hover {
+  background-color: var(--interactive-accent-hover);
+}
 .modal.mod-settings {
   background: var(--surround-bg)
 }

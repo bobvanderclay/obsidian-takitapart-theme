@@ -29,9 +29,6 @@
 .mod-single-child .markdown-preview-view {
   font-family: var(--font-family-editor);
   font-size: var(--font-size-normal);
-  padding-top: 0px;
-  padding-left: 2% !important;
-  padding-right: 1% !important;
 }
 
 /* bold in preview and editor */
@@ -290,34 +287,6 @@ thead {
 }
 
 /***************************************/
-/*               Checkbox              */
-/***************************************/
-
-.markdown-preview-view .task-list-item-checkbox:checked::before {
-  content: '✓';
-  position: absolute;
-  color: var(--text-accent);
-  font-size: 1em;
-  line-height: 1.25em;
-  width: 1.2em;
-  text-align: center;
-  text-shadow: 0 0 0.1em var(--text-accent);
-}
-
-.markdown-preview-view .task-list-item-checkbox {
-  -webkit-appearance: none;
-  top: 0.2em !important;
-  right: 4px;
-  box-sizing: border-box;
-  border: 1px solid var(--text-muted);
-  position: relative;
-  width: 1.25em;
-  height: 1.25em;
-  margin: 0;
-  box-shadow: 0 0 0.1em var(--text-muted);
-}
-
-/***************************************/
 /*           html in editor            */
 /***************************************/
 
@@ -334,4 +303,50 @@ thead {
 /* html comments in editor */
 .cm-s-obsidian span.cm-comment {
   color: var(--text-faint) !important;
+}
+
+/***************************************/
+/*           PREVIEW                   */
+/***************************************/
+.markdown-preview-view {
+  padding: 20px 30px 20px 40px;
+  line-height: 1.7;
+
+  &.is-readable-line-width {
+  }
+  &.allow-fold-headings {
+  }
+  &.allow-fold-lists {
+  }
+
+  & .markdown-preview-sizer {
+  }
+
+  & .markdown-preview-pusher {
+  }
+
+  & ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 16px;
+
+    &.contains-task-list {
+    }
+
+    & li {
+      list-style-position: initial;
+      list-style-image: initial;
+      list-style-type: disc;
+      text-indent: 0;
+
+      &.task-list-item {
+        & .task-list-item-checkbox {
+        }
+      }
+    }
+  }
 }

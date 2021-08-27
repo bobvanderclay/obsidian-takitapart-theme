@@ -22,9 +22,20 @@ body.is-translucent {
 /*************************************/
 /*                tags               */
 /*************************************/
-/* Tag hover in preview */
-a.tag:hover {
-  color: var(--text-accent) !important;
+a.tag {
+  font-family: var(--font-family-editor) !important;
+  background-color: var(--text-accent-hover);
+  border: none;
+  border-radius: 12px;
+  color: white !important;
+  font-size: var(--font-size-normal) !important;
+  text-align: center;
+  text-decoration: none !important;
+  display: inline-block;
+  padding: 0px 8px 0px 8px;
+  margin: 0px 0px;
+  cursor: pointer;
+  font-style: normal !important;
 }
 
 /* Tag Color in editor and preview*/
@@ -42,14 +53,14 @@ a.tag:hover {
   cursor: pointer;
 }
 .cm-hashtag-begin {
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  padding: 1px 1px 1px 8px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  padding: 0px 1px 0px 8px;
 }
 .cm-hashtag-end {
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
-  padding: 1px 8px 1px 1px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 0px 8px 0px 1px;
 }
 
 /* to customize tags */
@@ -123,14 +134,6 @@ a.tag:hover {
 
 .markdown-embed-link:hover {
   color: var(--text-accent) !important;
-}
-
-/***************************************/
-/*            settings                 */
-/***************************************/
-
-.modal.mod-settings button:not(.mod-cta):hover {
-  background-color: var(--interactive-accent-hover);
 }
 
 /***************************************/
