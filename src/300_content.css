@@ -65,17 +65,8 @@ s,
 }
 
 /* list in editor */
-span.cm-formatting-list {
+span.list-bullet {
   color: var(--text-accent) !important;
-}
-
-span.cm-formatting-list-ul {
-  visibility: hidden !important;
-}
-span.cm-formatting-list-ul:after {
-  content: '• ';
-  margin-left: -12px;
-  visibility: visible !important;
 }
 
 /* Tasks */
@@ -344,8 +335,21 @@ thead {
       text-indent: 0;
 
       &.task-list-item {
+        text-indent: -24px;
+
         & .task-list-item-checkbox {
+          left: -1px;
         }
+      }
+
+      /* Don't put margins on sublists. */
+      & > ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+
+      &::marker {
+        color: var(--text-accent) !important;
       }
     }
   }

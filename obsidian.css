@@ -830,7 +830,7 @@ textarea {
 }
 input[type='checkbox'] {
   border: none !important;
-  filter: opacity(0.5) !important
+  filter: opacity(0.6) !important
 }
 input[type='checkbox']:checked {
     filter: hue-rotate(-25deg) saturate(0.5) !important;
@@ -1159,16 +1159,8 @@ s,
   color: rgba(255, 255, 255, 0.1) !important;
 }
 /* list in editor */
-span.cm-formatting-list {
+span.list-bullet {
   color: var(--text-accent) !important;
-}
-span.cm-formatting-list-ul {
-  visibility: hidden !important;
-}
-span.cm-formatting-list-ul:after {
-  content: '• ';
-  margin-left: -12px;
-  visibility: visible !important;
 }
 /* Tasks */
 .cm-formatting-task {
@@ -1395,8 +1387,23 @@ thead {
       list-style-type: disc;
       text-indent: 0
     }
+.markdown-preview-view ul li.task-list-item {
+        text-indent: -24px
+      }
 .markdown-preview-view ul li.task-list-item .task-list-item-checkbox {
+          left: -1px;
         }
+.markdown-preview-view ul li {
+
+      /* Don't put margins on sublists. */
+    }
+.markdown-preview-view ul li > ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+.markdown-preview-view ul li::marker {
+        color: var(--text-accent) !important;
+      }
 /***************************************/
 /*             graph view              */
 /***************************************/

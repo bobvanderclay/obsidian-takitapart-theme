@@ -275,7 +275,7 @@ textarea {
 }
 input[type='checkbox'] {
   border: none !important;
-  filter: opacity(0.5) !important;
+  filter: opacity(0.6) !important;
   &:checked {
     filter: hue-rotate(-25deg) saturate(0.5) !important;
   }
